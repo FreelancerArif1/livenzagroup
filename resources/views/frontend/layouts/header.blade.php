@@ -25,8 +25,8 @@
                                 <div class="col-md-5 p-0">
                                     <ul class="header-menu list-unstyled leftside_navbs">
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Trump
-                                                International, Scotland Awarded Golf Course 2025
+                                            <a class="menu-link menu-link-main menu-accrodion" href="#">
+                                                Building a river of growth
                                             </a>
                                         </li>
                                         {{-- <li class="nav-item">
