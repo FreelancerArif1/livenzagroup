@@ -15,7 +15,7 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">My Plan Development</h2>
+                                    <h2 class="heading text-24">Plan Development</h2>
                                     <p class="text text-16">Consulting</p>
                                 </div>
                             </div>
