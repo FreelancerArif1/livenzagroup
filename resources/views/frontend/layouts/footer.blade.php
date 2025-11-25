@@ -9,27 +9,7 @@
                             <ul class="footer-menu livenza_footer">
                                 <li>
                                     <a href="privacy-policy.html" class="text text-14 link" aria-label="Privacy Policy">
-                                        Hotels
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="faq.html" class="text text-14 link" aria-label="FAQ">
-                                        Golf
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html" class="text text-14 link" aria-label="FAQ">
-                                        Reality
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="privacy-policy.html" class="text text-14 link" aria-label="Privacy Policy">
-                                        Book
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="privacy-policy.html" class="text text-14 link" aria-label="Privacy Policy">
-                                        Store
+                                        Copyright © 2025 Livenza Group. All rights reserved.
                                     </a>
                                 </li>
                             </ul>
@@ -38,27 +18,19 @@
                             <ul class="footer-menu livenza_footer float-end">
                                 <li>
                                     <a href="privacy-policy.html" class="text text-14 link" aria-label="Privacy Policy">
-                                        Terms of service
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="faq.html" class="text text-14 link" aria-label="FAQ">
                                         Privacy Policy
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="faq.html" class="text text-14 link" aria-label="FAQ">
+                                        Terms & Conditions
+
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="contact.html" class="text text-14 link" aria-label="FAQ">
-                                        Coverage
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="privacy-policy.html" class="text text-14 link" aria-label="Privacy Policy">
-                                        Contact
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="privacy-policy.html" class="text text-14 link" aria-label="Privacy Policy">
-                                        Copywrite @ 2025 Livenza Group
+                                        Cookie Policy
+
                                     </a>
                                 </li>
                             </ul>

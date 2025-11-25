@@ -23,27 +23,13 @@
 
                             <div class="row p-0">
                                 <div class="col-md-5 p-0">
-                                    <ul class="header-menu list-unstyled leftside_navbs">
+                                    {{-- <ul class="header-menu list-unstyled leftside_navbs">
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main menu-accrodion" href="#">
                                                 Building a river of growth
                                             </a>
                                         </li>
-                                        {{-- <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> About Us </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Home
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> About Us </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Home
-                                            </a>
-                                        </li> --}}
-                                    </ul>
+                                    </ul> --}}
                                     <ul class="header-menu list-unstyled leftside_navbs">
                                         <li class="nav-item">
                                             <ul class="social-icons list-unstyled" data-aos="fade-up"
@@ -72,23 +58,23 @@
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> Our Story </a>
+                                            <a class="menu-link menu-link-main" href="#"> Home </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Hotels
+                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> About Us
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> Golf </a>
+                                            <a class="menu-link menu-link-main" href="#"> Companies </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main menu-accrodion" href="#">
-                                                Residential
+                                                Careers
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-2 p-0">
+                                <div class="col-md-2 p-0 text-center">
                                     <li class="nav-item logo_li">
                                         <a class="menu-link menu-link-main logo_link" href="#">
                                             <img src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}"
@@ -97,7 +83,7 @@
                                     </li>
                                 </div>
                                 <div class="col-md-5 p-0">
-                                    <ul class="header-menu list-unstyled rightside_navbs">
+                                    {{-- <ul class="header-menu list-unstyled rightside_navbs">
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main menu-accrodion" href="#">
                                                 Newsletter
@@ -113,25 +99,26 @@
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main" href="#">Hotel Reservation</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                     <ul class="header-menu list-unstyled rightside_navbs">
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Comercial
+                                            <a class="menu-link menu-link-main menu-accrodion" href="#">
+                                                Sustainability
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> States </a>
+                                            <a class="menu-link menu-link-main" href="#"> News </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Lifestyle
+                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Expansion
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#">Digital Asset</a>
+                                            <a class="menu-link menu-link-main" href="#">Contact</a>
                                         </li>
                                         <li class="nav-item shop_now_item">
                                             <a class="menu-link menu-link-main menu-accrodion shop_now" href="#">
-                                                Shop
+                                                Apply
                                             </a>
                                         </li>
                                     </ul>
@@ -143,8 +130,7 @@
                         <drawer-opener class="svg-wrapper menu-open d-lg-none" data-drawer=".drawer-menu">
                             <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26" r="25.5" fill="white"
-                                    stroke="currentColor" />
+                                <circle cx="26" cy="26" r="25.5" fill="white" stroke="currentColor" />
                                 <path
                                     d="M32.5 18.2857C32.5 17.5757 31.9179 17 31.2 17H14.3C13.5821 17 13 17.5757 13 18.2857C13 18.9958 13.5821 19.5714 14.3 19.5714H31.2C31.9179 19.5714 32.5 18.9957 32.5 18.2857ZM14.3 24.7143H37.7C38.4179 24.7143 39 25.29 39 26C39 26.7101 38.4179 27.2857 37.7 27.2857H14.3C13.5821 27.2857 13 26.7101 13 26C13 25.29 13.5821 24.7143 14.3 24.7143ZM14.3 32.4286H26C26.7179 32.4286 27.3 33.0042 27.3 33.7143C27.3 34.4243 26.7179 35 26 35H14.3C13.5821 35 13 34.4243 13 33.7143C13 33.0042 13.5821 32.4286 14.3 32.4286Z"
                                     fill="currentColor" />

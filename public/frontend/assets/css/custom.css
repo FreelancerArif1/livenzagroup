@@ -1,5 +1,5 @@
 .headeremtyspace {
-    padding-top: 85px;
+    padding-top: 60px;
 }
 
 #homepage {
@@ -35,7 +35,8 @@
 
 .header-floating {
     background: #fff;
-    padding: 8px 0px;
+    padding: 0px 0px;
+
     border-bottom: 1px solid #efefef;
 }
 
@@ -58,7 +59,7 @@
 
 @media (max-width: 1600px) {
     .menu-link-main {
-        padding: 10px 15px;
+        padding: 25px 20px;
     }
 }
 
@@ -87,11 +88,14 @@
 }
 
 .logo_link img {
-    width: 150px;
+    width: 110px;
+    margin: 0 auto;
 }
 
 .menu-link {
-    font-weight: 400;
+    font-size: 14px;
+    /* font-weight: 400; */
+    text-transform: uppercase;
 }
 
 .nav-item:focus>.menu-link,
