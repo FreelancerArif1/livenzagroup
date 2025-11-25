@@ -99,8 +99,6 @@
 .nav-item:focus>.menu-link,
 .nav-item:hover>.menu-link {
     color: var(--theme-bg-green);
-    /* font-weight: 500; */
-
 }
 
 .social-link {
