@@ -134,11 +134,20 @@
     color: #fff;
     font-weight: 800;
     /* background: #0033CC; */
-    background: #0033CC;
+    background: var(--theme-bg-blue);
     transition: 600ms;
     color: #fff;
 }
 
 .card-project {
     /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25); */
+}
+
+.livenza_footer_legal .link:hover {
+    color: var(--theme-bg-green);
+}
+
+.footer-menu .link:focus,
+.footer-menu .link:hover {
+    opacity: 1;
 }
