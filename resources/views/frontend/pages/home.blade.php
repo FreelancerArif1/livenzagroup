@@ -11,7 +11,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
                         data-aos-delay="200">
                         <a class="card-project radius18" aria-label="project details" href="project-details.html">
-                            <img src="/frontend/assets/img/project/card/2.jpg" alt="project image" width="645"
+                            <img src="/frontend/assets/img/project/card/22.jpg" alt="project image" width="645"
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
@@ -25,7 +25,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
                         data-aos-delay="300">
                         <a class="card-project radius18" aria-label="project details" href="project-details.html">
-                            <img src="/frontend/assets/img/project/card/3.jpg" alt="project image" width="645"
+                            <img src="/frontend/assets/img/project/card/33.jpg" alt="project image" width="645"
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
@@ -39,7 +39,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
                         data-aos-delay="400">
                         <a class="card-project radius18" aria-label="project details" href="project-details.html">
-                            <img src="/frontend/assets/img/project/card/4.jpg" alt="project image" width="645"
+                            <img src="/frontend/assets/img/project/card/44.jpg" alt="project image" width="645"
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
@@ -53,7 +53,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
                         data-aos-delay="100">
                         <a class="card-project radius18" aria-label="project details" href="project-details.html">
-                            <img src="/frontend/assets/img/project/card/5.jpg" alt="project image" width="645"
+                            <img src="/frontend/assets/img/project/card/55.jpg" alt="project image" width="645"
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
@@ -68,7 +68,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
                         data-aos-delay="300">
                         <a class="card-project radius18" aria-label="project details" href="project-details.html">
-                            <img src="/frontend/assets/img/project/card/6.jpeg" alt="project image" width="645"
+                            <img src="/frontend/assets/img/project/card/66.jpg" alt="project image" width="645"
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
@@ -83,7 +83,7 @@
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
                         data-aos-delay="300">
                         <a class="card-project radius18" aria-label="project details" href="project-details.html">
-                            <img src="/frontend/assets/img/project/card/7.jpg" alt="project image" width="645"
+                            <img src="/frontend/assets/img/project/card/77.jpg" alt="project image" width="645"
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
