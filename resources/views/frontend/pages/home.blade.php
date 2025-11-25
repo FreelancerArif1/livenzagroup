@@ -15,8 +15,8 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Plan Development</h2>
-                                    <p class="text text-16">Consulting</p>
+                                    <h2 class="heading text-24">Automotive - EV Mobility</h2>
+                                    <p class="text text-16">Noor Autos , Official BYD Dealership</p>
                                 </div>
                             </div>
 
@@ -29,8 +29,8 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Risk Management</h2>
-                                    <p class="text text-16">New Business</p>
+                                    <h2 class="heading text-24">RMG - Packaging Manufacturing</h2>
+                                    <p class="text text-16">Expo Accessories Ltd</p>
                                 </div>
                             </div>
 
@@ -43,8 +43,8 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Investment Idea</h2>
-                                    <p class="text text-16">Digital marketing</p>
+                                    <h2 class="heading text-24">Clean Energy & Industrial Solutions BD</h2>
+                                    <p class="text text-16">Greenery Energy Solution Ltd ( Bangladesh )</p>
                                 </div>
                             </div>
 
@@ -57,23 +57,8 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Business Consulting</h2>
-                                    <p class="text text-16">Expert Growth</p>
-                                </div>
-                            </div>
-
-                        </a>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <a class="card-project radius18" aria-label="project details" href="project-details.html">
-                            <img src="/frontend/assets/img/project/card/7.jpg" alt="project image" width="645"
-                                height="690" loading="lazy">
-                            <div class="card-project-content-absolute">
-                                <div class="card-project-content">
-                                    <h2 class="heading text-24">Sustainability Strategy</h2>
-                                    <p class="text text-16">Development</p>
+                                    <h2 class="heading text-24">Clean Energy & Industrial Solutions Canada</h2>
+                                    <p class="text text-16">Greenery Import Export Ltd ( Canada )</p>
                                 </div>
                             </div>
 
@@ -87,8 +72,23 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Sustainability Strategy</h2>
-                                    <p class="text text-16">Development</p>
+                                    <h2 class="heading text-24">Industrial Retail - Worker-Centric Stores</h2>
+                                    <p class="text text-16">Greenery Mart</p>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <a class="card-project radius18" aria-label="project details" href="project-details.html">
+                            <img src="/frontend/assets/img/project/card/7.jpg" alt="project image" width="645"
+                                height="690" loading="lazy">
+                            <div class="card-project-content-absolute">
+                                <div class="card-project-content">
+                                    <h2 class="heading text-24">Pharmaceutical - Industrial Plastics</h2>
+                                    <p class="text text-16">Novelty Bangladesh Ltd</p>
                                 </div>
                             </div>
 
