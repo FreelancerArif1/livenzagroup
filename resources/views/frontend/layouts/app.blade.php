@@ -172,7 +172,7 @@
     <!-- all css -->
     <link rel="stylesheet" href="/frontend/assets/css/vendor.css">
     <link rel="stylesheet" href="/frontend/assets/css/style.css">
-    <link rel="stylesheet" href="/frontend/assets/css/custom.css">
+    <link rel="stylesheet" href="/frontend/assets/css/custom.css?v=<?php echo time(); ?>">
     <title>
         @hasSection('title')
             @yield('title')
