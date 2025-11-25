@@ -74,11 +74,7 @@
     color: var(--color-shadow);
 }
 
-@media (min-width: 768px) {
-    /* .col-md-2 {
-        width: 10.666667%;
-    } */
-}
+
 
 .logo_link {
     padding: 0;
