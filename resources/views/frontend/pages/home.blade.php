@@ -15,7 +15,7 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Automotive - EV Mobility</h2>
+                                    <h2 class="heading text-20">Automotive - EV Mobility</h2>
                                     <p class="text text-16">Noor Autos , Official BYD Dealership</p>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">RMG - Packaging Manufacturing</h2>
+                                    <h2 class="heading text-20">RMG - Packaging Manufacturing</h2>
                                     <p class="text text-16">Expo Accessories Ltd</p>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Clean Energy & Industrial Solutions BD</h2>
+                                    <h2 class="heading text-20">Clean Energy & Industrial Solutions BD</h2>
                                     <p class="text text-16">Greenery Energy Solution Ltd ( Bangladesh )</p>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Clean Energy & Industrial Solutions Canada</h2>
+                                    <h2 class="heading text-20">Clean Energy & Industrial Solutions Canada</h2>
                                     <p class="text text-16">Greenery Import Export Ltd ( Canada )</p>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Industrial Retail - Worker-Centric Stores</h2>
+                                    <h2 class="heading text-20">Industrial Retail - Worker-Centric Stores</h2>
                                     <p class="text text-16">Greenery Mart</p>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                 height="690" loading="lazy">
                             <div class="card-project-content-absolute">
                                 <div class="card-project-content">
-                                    <h2 class="heading text-24">Pharmaceutical - Industrial Plastics</h2>
+                                    <h2 class="heading text-20">Pharmaceutical - Industrial Plastics</h2>
                                     <p class="text text-16">Novelty Bangladesh Ltd</p>
                                 </div>
                             </div>

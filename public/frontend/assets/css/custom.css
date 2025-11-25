@@ -4,6 +4,7 @@
 
 #homepage {
     width: 100%;
+    min-height: 100vh;
 }
 
 .livenza_footer {
@@ -95,7 +96,7 @@
 
 .nav-item:focus>.menu-link,
 .nav-item:hover>.menu-link {
-    color: var(--theme-bg-green);
+    color: var(--theme-bg-blue);
 }
 
 .social-link {
@@ -103,28 +104,37 @@
     width: var(--size-social, 23px);
     height: var(--size-social, 23px);
     font-size: 12px;
-    background: var(--theme-bg-green);
+    transition: 600ms;
     border-radius: 2px;
+    border: 1px solid var(--theme-bg-blue);
+    color: var(--theme-bg-blue);
+}
+
+.social-link:hover {
+    color: #fff;
+    background: #0033CC;
+    transition: 600ms;
 }
 
 .shop_now {
-    background: var(--theme-bg-green);
-    color: #fff;
+    border: 1px solid var(--theme-bg-blue);
+    color: var(--theme-bg-blue);
     font-size: 12px;
     margin-right: 15px;
     font-weight: 800;
+    padding: 3px 15px;
+    transition: 600ms;
 }
 
 .shop_now_item:hover .shop_now {
     color: #fff;
     font-weight: 800;
-    background: var(--theme-bg-blue);
+    /* background: #0033CC; */
+    background: #0033CC;
+    transition: 600ms;
+    color: #fff;
 }
 
 .card-project {
     /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25); */
-}
-
-.social-link:hover {
-    background: var(--theme-bg-blue);
 }
