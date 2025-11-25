@@ -84,7 +84,7 @@
 }
 
 .logo_link img {
-    width: 120px;
+    width: 150px;
 }
 
 .menu-link {
@@ -102,7 +102,6 @@
     height: var(--size-social, 23px);
     font-size: 12px;
     background: var(--theme-bg-green);
-    ;
     border-radius: 2px;
 }
 
