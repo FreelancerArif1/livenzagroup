@@ -28,3 +28,5 @@ oldvue
 /vendor
 # /public
 *.zip
+
+/public/uploads/settings

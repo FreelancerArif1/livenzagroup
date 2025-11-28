@@ -151,3 +151,16 @@
 .footer-menu .link:hover {
     opacity: 1;
 }
+
+/* .bd-hotels .large-image-slider:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 15px;
+    background-image: url(/assets/images/site/triangle2.svg);
+} */

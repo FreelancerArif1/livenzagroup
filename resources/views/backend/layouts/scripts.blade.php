@@ -1,5 +1,6 @@
 <script src="{{ asset('backend/js/propper.min.js') }}"></script>
 <script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('backend/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('backend/js/all.min.js') }}"></script>
 <script src="{{ asset('backend/js/jquery-scrollbar.min.js') }}"></script>
 <script src="{{ asset('backend/js/validator.js') }}"></script>
@@ -7,6 +8,9 @@
 <script src="{{ asset('backend/js/select2.min.js') }}"></script>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 <script src="{{ asset('backend/js/main.js') }}"></script>
 
 <script>

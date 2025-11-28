@@ -1,3 +1,8 @@
+.action_column,
+.action_column_td {
+    text-align: right !important;
+}
+
 @media (max-width: 991px) {
     .mobiledate {
         color: #fff;

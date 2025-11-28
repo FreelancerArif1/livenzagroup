@@ -15,7 +15,7 @@ $(document).on('click', '#CreateModalSubmitBtn', function(e) {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             url: $('#CreateForm').attr('action'),
-            type: "POST",
+            type: $('#CreateForm').attr('method'),
             data: formData,
             processData: false,
             contentType: false,

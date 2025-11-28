@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Backend\CompanyController;
 
 Route::get('/store-cache', function () {
     try {
@@ -96,6 +97,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
     Route::resource('slider', SliderController::class);
     Route::get('/slider-list', [SliderController::class, 'list'])->name('admin.slider.list');
+
+    Route::resource('company', SliderController::class);
+    Route::get('/company-list', [CompanyController::class, 'list'])->name('admin.company.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 

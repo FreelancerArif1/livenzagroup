@@ -1,42 +1,58 @@
 <!-- Modal -->
-<div class="modal sm fade" id="CreateModalOpen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-md" role="document">
+<div class="modal fade" id="CreateModalOpen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form id="CreateForm" action="" method="post" enctype="multipart/form-data">
+            <form id="CreateForm" action="{{ route('slider.store') }}" method="POST" enctype="multipart/form-data">
+
                 @csrf
                 <div class="modal-header">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h1 class="modal-title" id="exampleModalLabel">Add New</h1>
-                        </div>
-                        <div class="col-md-6"><button type="button" class="close" data-dismiss="modal"
-                                aria-hidden="true">&times;</button></div>
-                    </div>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add New</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
+
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="server_side_error" role="alert"></div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="name">Country Name</label>
-                                <input type="text" class="form-control" name="name" id="name" value=""
-                                    placeholder="Enter Country Name">
-                            </div>
-                        </div>
-                        {{-- <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="status">Status</label>
-                                <select class="form-control" id="status" name="status">
-                                    <option value="1">Active </option>
-                                    <option value="0">Inactive</option>
-                                </select>
-                            </div>
-                        </div> --}}
+                    <div class="server_side_error"></div>
+                    <div class="form-group">
+                        <label for="name">Title</label>
+                        <input type="text" class="form-control" name="title" placeholder="Enter Titel">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Description</label>
+                        <textarea class="form-control" name="description" placeholder="Enter Description" cols="5" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Website Link</label>
+                        <input type="text" class="form-control" name="button_link" placeholder="Enter Website Link">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Image</label>
+                        <input type="file" class="form-control" name="image" placeholder="Enter Image">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Video</label>
+                        <input type="file" class="form-control" name="video" placeholder="Enter Video">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">YouTube Video Link</label>
+                        <input type="text" class="form-control" name="youtube_video"
+                            placeholder="Enter YouTube Video Link">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Select Company</label>
+                        <select name="slier_for" class="form-control">
+                            <option value="1">Company 1</option>
+                            <option value="2">Company 2</option>
+                            <option value="3">Company 3</option>
+                            <option value="4">Company 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Serial</label>
+                        <input type="text" class="form-control" name="serial" placeholder="Enter Serial">
                     </div>
                 </div>
+
                 <div class="modal-footer">
                     <button type="submit" id="CreateModalSubmitBtn" class="btn btn-sm btn-primary">Submit</button>
                 </div>
@@ -46,9 +62,8 @@
 </div>
 
 {{-- edit modal  --}}
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-md">
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
         </div>

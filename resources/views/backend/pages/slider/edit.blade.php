@@ -16,7 +16,7 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="name">Country Name</label>
+                    <label for="name">Slider Name</label>
                     <input type="text" class="form-control" name="name" id="name"
                         value="{{ $country->name }}">
                     <input type="hidden" name="id" value="{{ $country->id }}">
