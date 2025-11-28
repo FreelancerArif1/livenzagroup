@@ -1,6 +1,6 @@
 <script src="{{ asset('backend/js/propper.min.js') }}"></script>
 <script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('backend/js/bootstrap.bundle.min.js') }}"></script>
+{{-- <script src="{{ asset('backend/js/bootstrap.bundle.min.js') }}"></script> --}}
 <script src="{{ asset('backend/js/all.min.js') }}"></script>
 <script src="{{ asset('backend/js/jquery-scrollbar.min.js') }}"></script>
 <script src="{{ asset('backend/js/validator.js') }}"></script>

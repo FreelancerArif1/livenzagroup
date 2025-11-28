@@ -89,13 +89,11 @@ class SliderController extends Controller
             ->addColumn('action', function ($row) {
                 $btn = '';
                 if (Helper::hasRight('slider.edit')) {
-                    $btn = $btn . '<a href="" data-id="' . $row->id . '" class="edit_btn btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
+                    $btn = $btn . '<a data-url="/admin/slider/' . $row->id . '/edit" class="edit_modal_show btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
                 }
-                if (Helper::hasRight('slider.edit')) {
-                    $btn = $btn . '<a class="change_password btn btn-sm btn-warning text-light mx-1 " data-id="' . $row->id . '" href="" title="Change Password"><i class="fa-solid fa-key"></i></a>';
-                }
+
                 if (Helper::hasRight('slider.delete')) {
-                    $btn = $btn . '<a class="delete_btn btn btn-sm btn-danger " data-id="' . $row->id . '" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>';
+                    $btn = $btn . '<a class="ml-2 delete_btn btn btn-sm btn-danger " data-id="' . $row->id . '" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>';
                 }
                 return $btn;
             })
@@ -145,7 +143,8 @@ class SliderController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // return view('backend.slider.edit');
+        return 'ddd';
     }
 
     /**
@@ -153,7 +152,8 @@ class SliderController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $slider = Slider::find($id);
+        return view('backend.pages.slider.edit', ['slider' => $slider]);
     }
 
     /**
