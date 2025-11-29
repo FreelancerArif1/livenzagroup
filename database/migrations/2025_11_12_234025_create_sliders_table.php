@@ -23,6 +23,10 @@ return new class extends Migration
             $table->longText('description')->nullable();
             $table->string('video')->nullable();
             $table->string('youtube_video')->nullable();
+            $table->string('right_title_1')->nullable();
+            $table->longText('right_description_1')->nullable();
+            $table->string('right_title_2')->nullable();
+            $table->longText('right_description_2')->nullable();
             $table->string('serial')->nullable();
             $table->string('slier_for')->nullable();
             $table->unsignedTinyInteger('status')->default(1);

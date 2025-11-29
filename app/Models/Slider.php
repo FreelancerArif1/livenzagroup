@@ -8,17 +8,17 @@ class Slider extends Model
 {
     protected $fillable = [
         'title',
-        'top_title',
-        'bottom_title',
-        'button_text',
-        'button_link',
-        'image',
-        'short_description',
         'description',
-        'video',
+        'button_link',
         'youtube_video',
-        'serial',
+        'image',
+        'video',
         'slier_for',
+        'serial',
         'status',
+        'right_title_1',
+        'right_description_1',
+        'right_title_2',
+        'right_description_2',
     ];
 }

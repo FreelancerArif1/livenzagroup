@@ -23,7 +23,10 @@
             <table id="dataTable" class="table table-bordered">
                 <thead>
                     <tr>
+                        <th></th>
                         <th>Title</th>
+                        <th>Company</th>
+                        <th>Serial</th>
                         <th>Status</th>
                         <th class="action_column">Action</th>
                     </tr>
@@ -61,8 +64,20 @@
                 },
 
                 columns: [{
+                        data: 'image',
+                        name: 'image'
+                    },
+                    {
                         data: 'title',
                         name: 'title'
+                    },
+                    {
+                        data: 'slier_for',
+                        name: 'slier_for'
+                    },
+                    {
+                        data: 'serial',
+                        name: 'serial'
                     },
                     {
                         data: 'status',

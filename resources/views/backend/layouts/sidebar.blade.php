@@ -126,15 +126,43 @@
                     </li>
                 @endif
 
-                @if (Helper::hasRight('slider.view'))
-                    <li class="nav-item {{ Route::is('slider.index') ? 'active' : '' }}">
-                        <a href="{{ route('slider.index') }}">
-                            <i class="fa fa-sliders" aria-hidden="true"></i>
-                            <p class="ms-4"> {{ trans('Slider') }}</p>
+
+                @if (Helper::hasRight('setting.view'))
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#Companies"
+                            aria-expanded="@if (Route::is('slider.index')) true @else false @endif">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p class="ms-4">{{ trans('Companies') }}</p>
+                            <span class="caret"></span>
                         </a>
+                        <div class="collapse @if (Route::is('slider.index')) show @endif" id="Companies">
+                            <ul class="nav nav-collapse">
+                                @if (Helper::hasRight('role.view'))
+                                    <li class="{{ Route::is('slider.index') ? 'active' : '' }}">
+                                        <a href="{{ route('slider.index') }}">
+                                            <span class="sub-item">{{ trans('Sliders') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+                                @if (Helper::hasRight('right.view'))
+                                    <li class="{{ Route::is('admin.role.right') ? 'active' : '' }}">
+                                        <a href="{{ route('admin.role.right') }}">
+                                            <span class="sub-item">{{ trans('Portfolios') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+                                @if (Helper::hasRight('user.view'))
+                                    <li class="{{ Route::is('company.index') ? 'active' : '' }}">
+                                        <a href="{{ route('company.index') }}">
+                                            <span class="sub-item">{{ trans('Company list') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                            </ul>
+                        </div>
                     </li>
                 @endif
-
             </ul>
         </div>
     </div>

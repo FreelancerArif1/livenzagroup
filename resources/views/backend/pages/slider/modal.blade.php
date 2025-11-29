@@ -14,17 +14,49 @@
                     <div class="server_side_error"></div>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label>Title</label>
                                 <input type="text" class="form-control" name="title" placeholder="Enter Title">
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea class="form-control" name="description" placeholder="Enter Description" rows="3"></textarea>
+                                <textarea class="form-control tinymceText" name="description" placeholder="Enter Description" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Right Title 1</label>
+                                <input type="text" class="form-control" name="right_title_1"
+                                    placeholder="Enter Title">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Right Description 1</label>
+                                <textarea class="form-control tinymceText" name="right_description_1" placeholder="Enter Description" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Right Title 2</label>
+                                <input type="text" class="form-control" name="right_title_2"
+                                    placeholder="Enter Title">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Right Description 2</label>
+                                <textarea class="form-control tinymceText" name="right_description_2" placeholder="Enter Description" rows="3"></textarea>
                             </div>
                         </div>
                     </div>
@@ -50,7 +82,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Image</label>
+                                <label>Image (H:800px W:800px)</label>
                                 <input type="file" class="form-control" name="image">
                             </div>
                         </div>

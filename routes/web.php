@@ -98,10 +98,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('slider', SliderController::class);
     Route::get('/slider-list', [SliderController::class, 'list'])->name('admin.slider.list');
 
-    Route::resource('company', SliderController::class);
+    Route::resource('company', CompanyController::class);
     Route::get('/company-list', [CompanyController::class, 'list'])->name('admin.company.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
 //public routes
 Route::get('/', [FrontendController::class, 'home'])->name('home');
+Route::get('/company/{slug}', [FrontendController::class, 'singleCompany'])->name('single.company');

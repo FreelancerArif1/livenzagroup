@@ -84,6 +84,12 @@ $(document).on('click', '.edit_modal_show', function(e) {
         success: function(data) {
             $('#editModal .modal-content').html(data);
             $('#editModal').modal('show');
+            function initSummerNote() {
+                $('.tinymceText').summernote({
+                    height: 200,
+                });
+            }
+            initSummerNote();
         }
     })
 });
@@ -103,7 +109,7 @@ $(document).on('click', '#EditFormSubmitBtn', function(e) {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             url: $('#EditForm').attr('action'),
-            type: "POST",
+            type: "POST",   // must be POST, not PUT
             data: formData,
             processData: false,
             contentType: false,
@@ -131,7 +137,6 @@ $(document).on('click', '#EditFormSubmitBtn', function(e) {
                         timer: 3000
                     });
                 }
-
             },
             error: function(xhr) {
                 $('#EditFormSubmitBtn').prop('disabled', false);
@@ -140,33 +145,58 @@ $(document).on('click', '#EditFormSubmitBtn', function(e) {
                     $('.text-danger').remove();
                     $.each(errors, function(key, value) {
                         let input = $('[name="' + key + '"]');
-                        input.after('<span class="text-danger">' + value[0] +
-                            '</span>');
+                        input.after('<span class="text-danger">' + value[0] + '</span>');
                     });
                 }
             }
-        })
+        });
     }
 });
 
 $(document).on('click', '.deleteBtn', function(e) {
     e.preventDefault(); // stop normal link
-    const url = this.getAttribute('href');
+    const url = $(this).data('url'); // your route for slider.destroy
+
     Swal.fire({
-        title: 'Are you sure to delete ?',
-        // text: "You Want To Delete This Bank ?",
+        title: 'Are you sure to delete?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes',
+        confirmButtonText: 'Yes, delete it!',
         cancelButtonText: 'Cancel'
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = url;
+            $.ajax({
+                url: url,
+                type: 'POST', // must be POST
+                data: {
+                    _method: 'DELETE', // Laravel recognizes this as DELETE
+                    _token: $('meta[name="csrf-token"]').attr('content') // CSRF token
+                },
+                success: function(response) {
+                    if(response.status == 1) {
+                        Swal.fire({
+                            title: 'Deleted!',
+                            text: response.message,
+                            icon: 'success',
+                            timer: 1500,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.reload(); // reload or remove the row dynamically
+                        });
+                    } else {
+                        Swal.fire('Error', response.message, 'error');
+                    }
+                },
+                error: function(xhr) {
+                    Swal.fire('Error', 'Something went wrong!', 'error');
+                }
+            });
         }
     });
 });
+
 
 setTimeout(() => {
     $('.alert').hide();
