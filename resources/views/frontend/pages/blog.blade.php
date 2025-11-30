@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'Home | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
+@section('title', 'News | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
 @section('content')
     <main id="blog_page">
         <div class="page-banner overlay">
