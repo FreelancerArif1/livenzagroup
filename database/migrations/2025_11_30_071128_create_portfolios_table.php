@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('video')->nullable();
             $table->string('serial')->nullable();
+            $table->string('slier_for')->nullable();
             $table->unsignedTinyInteger('status')->default(1);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();

@@ -9,6 +9,7 @@ use Hash;
 use Helper;
 use App\Models\User;
 use App\Models\Project;
+use App\Models\Company;
 use Yajra\DataTables\DataTables;
 use App\Models\LeadingAndGovernor;
 use Illuminate\Support\Facades\File;
@@ -23,7 +24,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.project.index');
+        $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('backend.pages.project.index', compact('companies'));
     }
     public function list(Request $request)
     {
@@ -108,7 +110,8 @@ class ProjectController extends Controller
     public function edit(string $id)
     {
         $project = Project::find($id);
-        return view('backend.pages.project.edit', ['project' => $project]);
+        $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('backend.pages.project.edit', ['project' => $project, 'companies' => $companies]);
     }
 
     /**

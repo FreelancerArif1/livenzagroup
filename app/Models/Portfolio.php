@@ -17,5 +17,6 @@ class Portfolio extends Model
         'serial',
         'status',
         'slug',
+        'slier_for',
     ];
 }

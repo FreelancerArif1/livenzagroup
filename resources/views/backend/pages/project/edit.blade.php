@@ -67,7 +67,20 @@
                 </div>
             </div>
 
-
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Select Company</label>
+                    <select name="slier_for" class="form-control">
+                        <option disabled selected>--select Company--</option>
+                        @if ($companies)
+                            @foreach ($companies as $company)
+                                <option value="{{ $company->id }}" @if ($project->slier_for == $company->id) selected @endif>
+                                    {{ $company->title }}</option>
+                            @endforeach
+                        @endif
+                    </select>
+                </div>
+            </div>
 
             <div class="col-md-6">
                 <div class="form-group">

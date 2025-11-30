@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Laravel\Facades\Image;
 use Illuminate\Support\Str;
+use App\Models\Company;
 
 class PortfolioController extends Controller
 {
@@ -23,7 +24,8 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.portfolio.index');
+        $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('backend.pages.portfolio.index', compact('companies'));
     }
     public function list(Request $request)
     {
@@ -108,7 +110,8 @@ class PortfolioController extends Controller
     public function edit(string $id)
     {
         $portfolio = Portfolio::find($id);
-        return view('backend.pages.portfolio.edit', ['portfolio' => $portfolio]);
+        $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('backend.pages.portfolio.edit', ['portfolio' => $portfolio, 'companies' => $companies]);
     }
 
     /**

@@ -18,5 +18,6 @@ class Project extends Model
         'serial',
         'status',
         'slug',
+        'slier_for',
     ];
 }
