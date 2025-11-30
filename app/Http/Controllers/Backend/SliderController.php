@@ -8,7 +8,7 @@ use Auth;
 use Hash;
 use Helper;
 use App\Models\User;
-use App\Models\Student;
+use App\Models\Company;
 use App\Models\Slider;
 use Yajra\DataTables\DataTables;
 use App\Models\LeadingAndGovernor;
@@ -26,8 +26,8 @@ class SliderController extends Controller
 
     public function index()
     {
-
-        return view('backend.pages.slider.index');
+        $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('backend.pages.slider.index', compact('companies'));
     }
     public function list(Request $request)
     {
@@ -47,11 +47,11 @@ class SliderController extends Controller
             ->addColumn('action', function ($row) {
                 $btn = '';
                 if (Helper::hasRight('slider.edit')) {
-                    $btn = $btn . '<a data-url="/admin/slider/' . $row->id . '/edit" class="edit_modal_show btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
+                    $btn = $btn . '<a title="Edit this item." data-url="/admin/slider/' . $row->id . '/edit" class="edit_modal_show btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
                 }
 
                 if (Helper::hasRight('slider.delete')) {
-                    $btn = $btn . '<a class="ml-2 deleteBtn btn btn-sm btn-danger ms-1" data-url="/admin/slider/' . $row->id . '"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+                    $btn = $btn . '<a title="Delete this item." class="ml-2 deleteBtn btn btn-sm btn-danger ms-1" data-url="/admin/slider/' . $row->id . '"><i class="fa fa-trash" aria-hidden="true"></i></a>';
                 }
                 return $btn;
             })
@@ -111,7 +111,8 @@ class SliderController extends Controller
     public function edit(string $id)
     {
         $slider = Slider::find($id);
-        return view('backend.pages.slider.edit', ['slider' => $slider]);
+        $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('backend.pages.slider.edit', ['slider' => $slider, 'companies' => $companies]);
     }
 
     /**

@@ -79,7 +79,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Image(H:800px W:800px)</label>
+                    <label>Image (H:1920px W:1000px)</label>
                     <input type="file" class="form-control" name="image">
                     @if ($slider->image)
                         <img src="{{ $slider->image }}" width="120" class="mt-2" alt="">
@@ -106,10 +106,13 @@
                 <div class="form-group">
                     <label>Select Company</label>
                     <select name="slier_for" class="form-control">
-                        <option value="1" {{ $slider->slier_for == 1 ? 'selected' : '' }}>Company 1</option>
-                        <option value="2" {{ $slider->slier_for == 2 ? 'selected' : '' }}>Company 2</option>
-                        <option value="3" {{ $slider->slier_for == 3 ? 'selected' : '' }}>Company 3</option>
-                        <option value="4" {{ $slider->slier_for == 4 ? 'selected' : '' }}>Company 4</option>
+                        <option disabled selected>--select Company--</option>
+                        @if ($companies)
+                            @foreach ($companies as $company)
+                                <option value="{{ $company->id }}" @if ($slider->slier_for == $company->id) selected @endif>
+                                    {{ $company->title }}</option>
+                            @endforeach
+                        @endif
                     </select>
                 </div>
             </div>

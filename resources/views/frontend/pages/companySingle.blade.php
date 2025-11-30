@@ -7,13 +7,19 @@
             <picture class="media media-bg">
                 <source media="(max-width: 575px)" srcset="/frontend/assets/img/banner/page-banner-575.jpg">
                 <source media="(max-width: 991px)" srcset="/frontend/assets/img/banner/page-banner-991.jpg">
-                <img src="/frontend/assets/img/banner/page-banner.jpg" width="1920" height="520" loading="eager"
-                    alt="Page Banner Image">
+                @if ($slider?->video)
+                    <video class="full-video" autoplay muted loop playsinline>
+                        <source src="{{ $slider?->video }}" type="video/mp4">
+                    </video>
+                @else
+                    <img src="{{ $slider?->image }}" width="1920" height="520" loading="eager" alt="Page Banner Image">
+                @endif
+
             </picture>
             <div class="page-banner-content">
                 <div class="container text-left">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-7">
                             <div class="left_side_slider">
                                 <h3 class="heading text-40 fw-700 text-uppercase mb-4" data-aos="fade-up">
                                     {{ $slider?->title }}
@@ -23,48 +29,61 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-2"></div>
                         <div class="col-md-3">
                             <div class="right_top_slider">
-                                <h4 class="heading text-20 fw-700 text-uppercase mb-2" data-aos="fade-up">
-                                    <span class="heading_border">{{ $slider?->right_title_1 }}</span>
-                                </h4>
-                                <div class="slider_main_paragraph" data-aos="fade-up" data-aos-delay="200">
-                                    {!! $slider?->right_description_1 !!}
-                                </div>
+                                @if ($slider?->right_title_1)
+                                    <h4 class="heading text-20 fw-700 text-uppercase mb-2" data-aos="fade-up">
+                                        <span class="heading_border">{{ $slider?->right_title_1 }}</span>
+                                    </h4>
+                                @endif
+                                @if ($slider?->right_description_1)
+                                    <div class="slider_main_paragraph" data-aos="fade-up" data-aos-delay="200">
+                                        {!! $slider?->right_description_1 !!}
+                                    </div>
+                                @endif
                             </div>
+
                             <div class="right_bottom_slider">
-                                <h4 class="heading text-20 fw-700 text-uppercase mb-2" data-aos="fade-up">
-                                    <span class="heading_border">{{ $slider?->right_title_1 }}</span>
-                                </h4>
-                                <div class="slider_main_paragraph" data-aos="fade-up" data-aos-delay="200">
-                                    {!! $slider?->right_description_1 !!}
-                                </div>
+                                @if ($slider?->right_title_2)
+                                    <h4 class="heading text-20 fw-700 text-uppercase mb-2" data-aos="fade-up">
+                                        <span class="heading_border">{{ $slider?->right_title_2 }}</span>
+                                    </h4>
+                                @endif
+                                @if ($slider?->right_description_2)
+                                    <div class="slider_main_paragraph" data-aos="fade-up" data-aos-delay="200">
+                                        {!! $slider?->right_description_2 !!}
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 button_container text-center">
 
-                    <a href="/sss" class="middlebutton">
-                        visit website
-                    </a>
-                    {{-- <span class="triangle icon"></span> --}}
+        @if ($company?->button_link)
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 button_container text-center">
+
+                        <a href="{{ $company?->button_link }}" class="middlebutton">
+                            visit website
+                        </a>
+                        {{-- <span class="triangle icon"></span> --}}
+                    </div>
+                    <div class="col-md-4"></div>
                 </div>
-                <div class="col-md-4"></div>
             </div>
-        </div>
+        @endif
 
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <div class="single_company_title">
-                        Your time always is precius never settle
+                        {{ $company?->title }}
                         <div class="single_page_title_border"></div>
                     </div>
 
@@ -78,30 +97,10 @@
                 <div class="col-md-12">
                     <div class="single_page_description">
                         <h4 class="heading text-20 fw-700 text-uppercase mb-4" data-aos="fade-up">
-                            This is sub-title
+                            {{ $company?->sub_title }}
                         </h4>
                         <div data-aos="fade-up">
-                            Powering Bangladesh’s sustainable future with solar, ESS, and commercial HVAC technologies.
-                            Greenery Energy Solution Ltd is the official distributor of LESSO (solar/ESS) and ZERO
-                            (HVAC/VRF) , providing nationwide energy solutions for residential, commercial, and industrial
-                            sectors.
-                            We serve a fast-expanding installer and dealer ecosystem, backed by strong technical support,
-                            engineering teams, and reliable after-sales service.
-                            Core Solutions
-                            Solar Power Systems (Commercial, industrial)
-                            Energy Storage Solutions (ESS & Hybrid)
-                            Commercial HVAC & VRF Systems (ZERO)
-                            Project-based EPC Support
-                            Dealer/Installer Technical Training
-
-
-                            Value Proposition
-                            Guaranteed authentic LESSO & ZERO products
-                            Strong dealer pricing & margins
-                            Nationwide logistics & sales coverage
-                            Dedicated engineering helpdesk
-                            Fast warranty & after-sales support
-
+                            {!! $company?->description !!}
                         </div>
                     </div>
                 </div>
@@ -272,7 +271,7 @@
             <div class="container">
                 <div class="section-headings headings-width text-center">
                     <h3 class="heading text-40 fw-700 text-uppercase" data-aos="fade-up" data-aos-delay="20">
-                        Latest Portfolio
+                        Latest project
                     </h3>
                 </div>
             </div>

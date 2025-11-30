@@ -43,11 +43,11 @@ class CompanyController extends Controller
             ->addColumn('action', function ($row) {
                 $btn = '';
                 if (Helper::hasRight('user.edit')) {
-                    $btn = $btn . '<a data-url="/admin/company/' . $row->id . '/edit" class="edit_modal_show btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
+                    $btn = $btn . '<a title="Edit this item." data-url="/admin/company/' . $row->id . '/edit" class="edit_modal_show btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
                 }
 
                 if (Helper::hasRight('user.delete')) {
-                    $btn = $btn . '<a class="ml-2 deleteBtn btn btn-sm btn-danger ms-1" data-url="/admin/company/' . $row->id . '"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+                    $btn = $btn . '<a title="Delete this item." class="ml-2 deleteBtn btn btn-sm btn-danger ms-1" data-url="/admin/company/' . $row->id . '"><i class="fa fa-trash" aria-hidden="true"></i></a>';
                 }
                 return $btn;
             })
@@ -98,7 +98,8 @@ class CompanyController extends Controller
     public function show(string $id)
     {
         // return view('backend.company.edit');
-        return 'ddd';
+        echo 'ddd';
+        exit;
     }
 
     /**

@@ -24,8 +24,10 @@ class FrontendController extends Controller
     }
     public function singleCompany($slug)
     {
-        $slider = Slider::where('status', 1)->first();
 
-        return view('frontend.pages.companySingle', compact('slider'));
+        $company = Company::where('slug', $slug)->first();
+
+        $slider = Slider::where('status', 1)->first();
+        return view('frontend.pages.companySingle', compact('slider', 'company'));
     }
 }

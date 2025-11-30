@@ -82,7 +82,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Image (H:800px W:800px)</label>
+                                <label>Image (H:1920px W:1000px)</label>
                                 <input type="file" class="form-control" name="image">
                             </div>
                         </div>
@@ -100,10 +100,12 @@
                             <div class="form-group">
                                 <label>Select Company</label>
                                 <select name="slier_for" class="form-control">
-                                    <option value="1">Company 1</option>
-                                    <option value="2">Company 2</option>
-                                    <option value="3">Company 3</option>
-                                    <option value="4">Company 4</option>
+                                    <option disabled selected>--select Company--</option>
+                                    @if ($companies)
+                                        @foreach ($companies as $company)
+                                            <option value="{{ $company->id }}">{{ $company->title }}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                             </div>
                         </div>

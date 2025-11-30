@@ -12,7 +12,8 @@
                         @foreach ($companies as $company)
                             <div class="col-12 col-sm-6 col-lg-4 col-xl-4 single_company_box mb-3" data-aos="fade-up"
                                 data-aos-delay="200">
-                                <a class="card-project radius18" aria-label="project details" href="project-details.html">
+                                <a class="card-project radius18" aria-label="project details"
+                                    href="{{ route('single.company', $company->slug) }}">
                                     <img src="{{ $company->image }}" alt="project image" width="645" height="690"
                                         loading="lazy">
                                     <div class="card-project-content-absolute">
