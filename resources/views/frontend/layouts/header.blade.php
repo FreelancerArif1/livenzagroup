@@ -61,7 +61,8 @@
                                             <a class="menu-link menu-link-main" href="/"> Home </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="/about-us"> About Us
+                                            <a class="menu-link menu-link-main menu-accrodion" href="/about-us"> About
+                                                Us
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -107,7 +108,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="/"> News </a>
+                                            <a class="menu-link menu-link-main" href="/news"> News </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main menu-accrodion" href="/"> Expansion
