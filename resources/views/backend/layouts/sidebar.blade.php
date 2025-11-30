@@ -170,6 +170,38 @@
                         </div>
                     </li>
                 @endif
+
+
+                                @if (Helper::hasRight('setting.view'))
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#aboutus"
+                            aria-expanded="@if (Route::is('slider.index')) true @else false @endif">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p class="ms-4">{{ trans('About U') }}</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse @if (Route::is('slider.index')) show @endif" id="aboutus">
+                            <ul class="nav nav-collapse">
+                                @if (Helper::hasRight('role.view'))
+                                    <li class="{{ Route::is('about.index') ? 'active' : '' }}">
+                                        <a href="{{ route('about.index') }}">
+                                            <span class="sub-item">{{ trans('About Us') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+                        
+                                @if (Helper::hasRight('user.view'))
+                                    <li class="{{ Route::is('about.index') ? 'active' : '' }}">
+                                        <a href="{{ route('about.index') }}">
+                                            <span class="sub-item">{{ trans('Partners') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                            </ul>
+                        </div>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>
