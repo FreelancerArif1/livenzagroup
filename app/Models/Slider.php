@@ -12,6 +12,7 @@ class Slider extends Model
         'button_link',
         'youtube_video',
         'image',
+        'company_logo',
         'video',
         'slier_for',
         'serial',

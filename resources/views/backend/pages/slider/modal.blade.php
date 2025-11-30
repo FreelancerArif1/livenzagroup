@@ -11,24 +11,20 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="server_side_error"></div>
-
                     <div class="row">
+                        <div class="server_side_error"></div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Title</label>
                                 <input type="text" class="form-control" name="title" placeholder="Enter Title">
                             </div>
                         </div>
-
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Description</label>
                                 <textarea class="form-control tinymceText" name="description" placeholder="Enter Description" rows="3"></textarea>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Right Title 1</label>
@@ -36,15 +32,12 @@
                                     placeholder="Enter Title">
                             </div>
                         </div>
-
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Right Description 1</label>
                                 <textarea class="form-control tinymceText" name="right_description_1" placeholder="Enter Description" rows="3"></textarea>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Right Title 2</label>
@@ -52,16 +45,12 @@
                                     placeholder="Enter Title">
                             </div>
                         </div>
-
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Right Description 2</label>
                                 <textarea class="form-control tinymceText" name="right_description_2" placeholder="Enter Description" rows="3"></textarea>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Website Link</label>
@@ -69,7 +58,6 @@
                                     placeholder="Enter Website Link">
                             </div>
                         </div>
-
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>YouTube Video Link</label>
@@ -77,25 +65,24 @@
                                     placeholder="Enter YouTube Video Link">
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Image (H:1920px W:1000px)</label>
                                 <input type="file" class="form-control" name="image">
                             </div>
                         </div>
-
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Company Logo</label>
+                                <input type="file" class="form-control" name="company_logo">
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Video</label>
                                 <input type="file" class="form-control" name="video">
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Select Company</label>
@@ -109,7 +96,6 @@
                                 </select>
                             </div>
                         </div>
-
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Serial</label>

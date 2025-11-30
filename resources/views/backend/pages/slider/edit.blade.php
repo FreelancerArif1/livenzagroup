@@ -6,9 +6,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
     </div>
     <div class="modal-body">
-        <div class="server_side_error"></div>
-
         <div class="row">
+            <div class="server_side_error"></div>
             <div class="col-md-12">
                 <div class="form-group">
                     <label>title</label>
@@ -23,8 +22,7 @@
                     <textarea class="form-control tinymceText" name="description" rows="3" placeholder="Enter Description">{!! $slider->description !!}</textarea>
                 </div>
             </div>
-        </div>
-        <div class="row">
+
             <div class="col-md-12">
                 <div class="form-group">
                     <label>Right Title 1</label>
@@ -39,8 +37,7 @@
                     <textarea class="form-control tinymceText" name="right_description_1" placeholder="Enter Description" rows="3">{!! $slider->right_description_1 !!}</textarea>
                 </div>
             </div>
-        </div>
-        <div class="row">
+
             <div class="col-md-12">
                 <div class="form-group">
                     <label>Right Title 2</label>
@@ -55,9 +52,7 @@
                     <textarea class="form-control tinymceText" name="right_description_2" placeholder="Enter Description" rows="3">{!! $slider->right_description_2 !!}</textarea>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Website Link</label>
@@ -73,10 +68,7 @@
                         placeholder="Enter YouTube Video Link">
                 </div>
             </div>
-        </div>
 
-
-        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Image (H:1920px W:1000px)</label>
@@ -86,7 +78,15 @@
                     @endif
                 </div>
             </div>
-
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Company Logo</label>
+                    <input type="file" class="form-control" name="company_logo">
+                    @if ($slider->company_logo)
+                        <img src="{{ $slider->company_logo }}" width="120" class="mt-2" alt="">
+                    @endif
+                </div>
+            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Video</label>
@@ -98,10 +98,7 @@
                     @endif
                 </div>
             </div>
-        </div>
 
-
-        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Select Company</label>
@@ -125,8 +122,6 @@
                         placeholder="Enter Serial">
                 </div>
             </div>
-
-
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Status</label>
@@ -137,7 +132,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <div class="modal-footer">

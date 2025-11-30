@@ -36,9 +36,13 @@
                     <div class="row">
                         <div class="col-md-7">
                             <div class="left_side_slider">
+                                <div class="company_logo">
+                                    <img src="{{ $slider?->company_logo }}" height="auto" alt="">
+                                </div>
                                 <h3 class="heading text-40 fw-700 text-uppercase mb-4" data-aos="fade-up">
                                     {{ $slider?->title }}
                                 </h3>
+
                                 <div class="slider_main_paragraph" data-aos="fade-up" data-aos-delay="200">
                                     {!! $slider?->description !!}
                                 </div>
@@ -83,8 +87,10 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4 button_container text-center">
 
-                        <a href="{{ $company?->button_link }}" class="middlebutton">
-                            visit website
+                        <a href="{{ $company?->button_link }}" class="middlebutton" title="Visit {{ $slider?->title }}">
+                            <div class="visit_company_logo">
+                                <img src="{{ $slider?->company_logo }}" height="auto" alt="">
+                            </div>
                         </a>
                         {{-- <span class="triangle icon"></span> --}}
                     </div>

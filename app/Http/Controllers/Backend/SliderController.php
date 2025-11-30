@@ -79,14 +79,17 @@ class SliderController extends Controller
                 'errors' => $validator->errors(),
             ], 422);
         }
-        $data = $request->except(['video', 'image']);
+        $data = $request->except(['video', 'image', 'company_logo']);
         if ($request->hasFile('image')) {
             $data['image'] = $this->fileUpload($request, 'image', '/uploads/slider/');
         }
         if ($request->hasFile('video')) {
             $data['video'] = $this->fileUpload($request, 'video', '/uploads/slider/');
         }
+        if ($request->hasFile('company_logo')) {
 
+            $data['company_logo'] = $this->fileUpload($request, 'company_logo', '/uploads/slider/');
+        }
         $slider = Slider::create($data);
         return response()->json([
             'type' => 'success',
@@ -133,7 +136,7 @@ class SliderController extends Controller
         $slider = Slider::findOrFail($id);
 
         // Prepare data
-        $data = $request->except(['video', 'image']);
+        $data = $request->except(['video', 'image', 'company_logo']);
 
         if ($request->hasFile('image')) {
             $data['image'] = $this->fileUpload($request, 'image', '/uploads/slider/');
@@ -142,7 +145,9 @@ class SliderController extends Controller
         if ($request->hasFile('video')) {
             $data['video'] = $this->fileUpload($request, 'video', '/uploads/slider/');
         }
-
+        if ($request->hasFile('company_logo')) {
+            $data['company_logo'] = $this->fileUpload($request, 'company_logo', '/uploads/slider/');
+        }
         // Update the slider
         $slider->update($data);
 

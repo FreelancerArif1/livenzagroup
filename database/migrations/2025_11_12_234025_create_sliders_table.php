@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('button_text')->nullable();
             $table->string('button_link')->nullable();
             $table->string('image')->nullable();
+            $table->string('company_logo')->nullable();
             $table->longText('short_description')->nullable();
             $table->longText('description')->nullable();
             $table->string('video')->nullable();
