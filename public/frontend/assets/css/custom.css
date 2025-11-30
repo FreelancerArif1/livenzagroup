@@ -379,3 +379,7 @@
 .card-blog {
     --color-background: rgb(2 52 201 / 5%);
 }
+
+.sidebar-widget {
+    --color-background: rgb(2 52 201 / 5%);
+}
