@@ -188,7 +188,7 @@ class SliderController extends Controller
     protected function Validation($request)
     {
         return Validator::make($request->except(['_token', '_method']), [
-            'title'          => 'required|string|max:255',
+            'title'          => 'nullable|string|max:255',
             'description'    => 'nullable|string',
             'button_link'    => 'nullable|url',
             'video' => 'nullable|mimes:mp4,mov,avi,webm,mkv|max:200000',

@@ -113,4 +113,5 @@ Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logo
 
 //public routes
 Route::get('/', [FrontendController::class, 'home'])->name('home');
+Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/company/{slug}', [FrontendController::class, 'singleCompany'])->name('single.company');

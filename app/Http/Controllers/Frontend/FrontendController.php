@@ -24,6 +24,12 @@ class FrontendController extends Controller
         $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
         return view('frontend.pages.home', compact('companies'));
     }
+    public function about()
+    {
+        $about = Company::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('frontend.pages.about', compact('companies'));
+    }
+
     public function singleCompany($slug)
     {
 

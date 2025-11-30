@@ -39,9 +39,12 @@
                                 <div class="company_logo">
                                     <img src="{{ $slider?->company_logo }}" height="auto" alt="">
                                 </div>
-                                <h3 class="heading text-40 fw-700 text-uppercase mb-4" data-aos="fade-up">
-                                    {{ $slider?->title }}
-                                </h3>
+
+                                @if ($slider?->title)
+                                    <h4 class="heading text-30 fw-700 text-uppercase mb-4" data-aos="fade-up">
+                                        {{ $slider?->title }}
+                                    </h4>
+                                @endif
 
                                 <div class="slider_main_paragraph" data-aos="fade-up" data-aos-delay="200">
                                     {!! $slider?->description !!}
