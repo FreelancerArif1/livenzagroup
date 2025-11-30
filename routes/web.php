@@ -108,6 +108,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('project', ProjectController::class);
     Route::get('/project-list', [ProjectController::class, 'list'])->name('admin.project.list');
+    Route::resource('about', ProjectController::class);
+    Route::get('/about-list', [ProjectController::class, 'list'])->name('admin.about.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
