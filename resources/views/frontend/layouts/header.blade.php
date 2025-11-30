@@ -115,7 +115,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="/">Contact</a>
+                                            <a class="menu-link menu-link-main" href="/contact-us">Contact</a>
                                         </li>
                                         <li class="nav-item shop_now_item">
                                             <a class="menu-link menu-link-main menu-accrodion shop_now" href="/">
