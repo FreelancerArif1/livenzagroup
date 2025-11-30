@@ -23,11 +23,10 @@
             <table id="dataTable" class="table table-bordered">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>Title</th>
-                        <th>Company</th>
-                        <th>Serial</th>
-                        <th>Status</th>
+                        <th>Banner Title</th>
+                        <th>Story Title</th>
+                        <th>Mission Title</th>
+                        <th>Vision Title</th>
                         <th class="action_column">Action</th>
                     </tr>
                 </thead>
@@ -35,7 +34,7 @@
 
         </div>
     </div>
-    @include('backend.pages.company.modal');
+    @include('backend.pages.about.modal');
     <script>
         $(document).ready(function() {
 
@@ -59,30 +58,27 @@
                 ],
 
                 ajax: {
-                    url: "{{ route('admin.company.list') }}",
+                    url: "{{ route('admin.about.list') }}",
                     type: 'GET'
                 },
 
                 columns: [{
-                        data: 'image',
-                        name: 'image'
+                        data: 'baner_title',
+                        name: 'baner_title'
                     },
                     {
-                        data: 'title',
-                        name: 'title'
+                        data: 'story_title',
+                        name: 'story_title'
                     },
                     {
-                        data: 'sub_title',
-                        name: 'sub_title'
+                        data: 'mission_title',
+                        name: 'mission_title'
                     },
                     {
-                        data: 'serial',
-                        name: 'serial'
+                        data: 'vision_title',
+                        name: 'vision_title'
                     },
-                    {
-                        data: 'status',
-                        name: 'status'
-                    },
+
                     {
                         data: 'action',
                         name: 'action',

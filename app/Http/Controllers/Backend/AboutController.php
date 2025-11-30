@@ -33,25 +33,15 @@ class AboutController extends Controller
         $data = About::query();
         $data;
         return Datatables::of($data)
-            ->editColumn('image', function ($row) {
-                return '<img width="70" height="auto" src="' . $row->image . '">';
-            })
-            ->editColumn('status', function ($row) {
-                if ($row->status == 1) {
-                    return 'Active';
-                } else {
-                    return 'Inactive';
-                }
-            })
             ->addColumn('action', function ($row) {
                 $btn = '';
-                if (Helper::hasRight('about.edit')) {
+                if (Helper::hasRight('user.edit')) {
                     $btn = $btn . '<a title="Edit this item." data-url="/admin/about/' . $row->id . '/edit" class="edit_modal_show btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
                 }
 
-                if (Helper::hasRight('about.delete')) {
-                    $btn = $btn . '<a title="Delete this item." class="ml-2 deleteBtn btn btn-sm btn-danger ms-1" data-url="/admin/about/' . $row->id . '"><i class="fa fa-trash" aria-hidden="true"></i></a>';
-                }
+                // if (Helper::hasRight('about.delete')) {
+                //     $btn = $btn . '<a title="Delete this item." class="ml-2 deleteBtn btn btn-sm btn-danger ms-1" data-url="/admin/about/' . $row->id . '"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+                // }
                 return $btn;
             })
             ->rawColumns(['image', 'status', 'action'])->make(true);
@@ -78,17 +68,27 @@ class AboutController extends Controller
                 'errors' => $validator->errors(),
             ], 422);
         }
-        $data = $request->except(['video', 'image', 'company_logo']);
-        if ($request->hasFile('image')) {
-            $data['image'] = $this->fileUpload($request, 'image', '/uploads/about/');
+        $data = $request->except(['baner_image', 'story_image', 'mission_image', 'vision_image', 'values_image', 'leadership_image']);
+        if ($request->hasFile('baner_image')) {
+            $data['baner_image'] = $this->fileUpload($request, 'baner_image', '/uploads/about/');
         }
-        if ($request->hasFile('video')) {
-            $data['video'] = $this->fileUpload($request, 'video', '/uploads/about/');
+        if ($request->hasFile('story_image')) {
+            $data['story_image'] = $this->fileUpload($request, 'story_image', '/uploads/about/');
         }
-        if ($request->hasFile('company_logo')) {
+        if ($request->hasFile('mission_image')) {
+            $data['mission_image'] = $this->fileUpload($request, 'mission_image', '/uploads/about/');
+        }
+        if ($request->hasFile('vision_image')) {
+            $data['vision_image'] = $this->fileUpload($request, 'vision_image', '/uploads/about/');
+        }
+        if ($request->hasFile('values_image')) {
+            $data['values_image'] = $this->fileUpload($request, 'values_image', '/uploads/about/');
+        }
+        if ($request->hasFile('leadership_image')) {
+            $data['leadership_image'] = $this->fileUpload($request, 'leadership_image', '/uploads/about/');
+        }
 
-            $data['company_logo'] = $this->fileUpload($request, 'company_logo', '/uploads/about/');
-        }
+
         $about = About::create($data);
         return response()->json([
             'type' => 'success',
@@ -135,18 +135,27 @@ class AboutController extends Controller
         $about = About::findOrFail($id);
 
         // Prepare data
-        $data = $request->except(['video', 'image', 'company_logo']);
-
-        if ($request->hasFile('image')) {
-            $data['image'] = $this->fileUpload($request, 'image', '/uploads/about/');
+        $data = $request->except(['baner_image', 'story_image', 'mission_image', 'vision_image', 'values_image', 'leadership_image']);
+        if ($request->hasFile('baner_image')) {
+            $data['baner_image'] = $this->fileUpload($request, 'baner_image', '/uploads/about/');
+        }
+        if ($request->hasFile('story_image')) {
+            $data['story_image'] = $this->fileUpload($request, 'story_image', '/uploads/about/');
+        }
+        if ($request->hasFile('mission_image')) {
+            $data['mission_image'] = $this->fileUpload($request, 'mission_image', '/uploads/about/');
+        }
+        if ($request->hasFile('vision_image')) {
+            $data['vision_image'] = $this->fileUpload($request, 'vision_image', '/uploads/about/');
+        }
+        if ($request->hasFile('values_image')) {
+            $data['values_image'] = $this->fileUpload($request, 'values_image', '/uploads/about/');
+        }
+        if ($request->hasFile('leadership_image')) {
+            $data['leadership_image'] = $this->fileUpload($request, 'leadership_image', '/uploads/about/');
         }
 
-        if ($request->hasFile('video')) {
-            $data['video'] = $this->fileUpload($request, 'video', '/uploads/about/');
-        }
-        if ($request->hasFile('company_logo')) {
-            $data['company_logo'] = $this->fileUpload($request, 'company_logo', '/uploads/about/');
-        }
+
         // Update the about
         $about->update($data);
 

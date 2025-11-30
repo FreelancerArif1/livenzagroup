@@ -36,16 +36,7 @@
                                 height="80px" width="100px" class="site_logo_image mt-1 border" alt="">
                         </div>
                     </div>
-                    <div class="form-group  row">
-                        <label for="" class="col-sm-3 col-form-label">Site Favicon:</label>
-                        <div class="col-sm-9">
-                            <input type="file" class="form-control"
-                                onchange="previewFile('settingForm #site_favicon', 'settingForm .site_favicon_image')"
-                                name="site_favicon" id="site_favicon">
-                            <img src="{{ Helper::getSettings('site_favicon') ? asset(Helper::getSettings('site_favicon')) : asset('assets/img/no-img.jpg') }}"
-                                height="80px" width="80px" class="site_favicon_image mt-1 border" alt="">
-                        </div>
-                    </div>
+
                     <div class="form-group row">
                         <label for="" class="col-sm-3 col-form-label">Phone:</label>
                         <div class="col-sm-9">
@@ -91,18 +82,16 @@
                     <div class="form-group row">
                         <label for="" class="col-sm-3 col-form-label">Instagram (Link):</label>
                         <div class="col-sm-9">
-                            <input type="text" name="instagram_link"
-                                value="{{ Helper::getSettings('instagram_link') }}" class="form-control"
-                                placeholder="Instagram link">
+                            <input type="text" name="instagram_link" value="{{ Helper::getSettings('instagram_link') }}"
+                                class="form-control" placeholder="Instagram link">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="" class="col-sm-3 col-form-label">Linkedin (Link):</label>
                         <div class="col-sm-9">
-                            <input type="text" name="linkedin_link"
-                                value="{{ Helper::getSettings('linkedin_link') }}" class="form-control"
-                                placeholder="Linkedin link">
+                            <input type="text" name="linkedin_link" value="{{ Helper::getSettings('linkedin_link') }}"
+                                class="form-control" placeholder="Linkedin link">
                         </div>
                     </div>
 
@@ -113,8 +102,18 @@
                                 class="form-control" placeholder="Youtube link">
                         </div>
                     </div>
+                    <div class="form-group  row">
+                        <label for="" class="col-sm-3 col-form-label">About Image</label>
+                        <div class="col-sm-9">
+                            <input type="file" class="form-control"
+                                onchange="previewFile('settingForm #about_image', 'settingForm .about_image')"
+                                name="about_image" id="about_image">
+                            <img src="{{ Helper::getSettings('about_image') ? asset(Helper::getSettings('about_image')) : asset('assets/img/no-img.jpg') }}"
+                                height="80px" width="80px" class="D mt-1 border" alt="">
+                        </div>
+                    </div>
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Description:</label>
+                        <label for="" class="col-sm-3 col-form-label">About Us:</label>
                         <div class="col-sm-9">
                             <textarea type="text" name="application_toll_free" value="{{ Helper::getSettings('application_toll_free') }}"
                                 class="form-control" placeholder="Description" cols="30" rows="5">{{ Helper::getSettings('application_toll_free') }}</textarea>

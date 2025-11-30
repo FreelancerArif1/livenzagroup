@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\About;
 use Illuminate\Http\Request;
 use Auth;
 use Hash;
@@ -26,8 +27,8 @@ class FrontendController extends Controller
     }
     public function about()
     {
-        $about = Company::where('status', 1)->orderBy('serial', 'asc')->get();
-        return view('frontend.pages.about', compact('companies'));
+        $about = About::where('id', 1)->first();
+        return view('frontend.pages.about', compact('about'));
     }
 
     public function singleCompany($slug)

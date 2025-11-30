@@ -172,7 +172,7 @@
                 @endif
 
 
-                                @if (Helper::hasRight('setting.view'))
+                @if (Helper::hasRight('setting.view'))
                     <li class="nav-item">
                         <a data-bs-toggle="collapse" href="#aboutus"
                             aria-expanded="@if (Route::is('slider.index')) true @else false @endif">
@@ -180,7 +180,7 @@
                             <p class="ms-4">{{ trans('About Us') }}</p>
                             <span class="caret"></span>
                         </a>
-                        <div class="collapse @if (Route::is('slider.index')) show @endif" id="aboutus">
+                        <div class="collapse @if (Route::is('about.index')) show @endif" id="aboutus">
                             <ul class="nav nav-collapse">
                                 @if (Helper::hasRight('role.view'))
                                     <li class="{{ Route::is('about.index') ? 'active' : '' }}">
@@ -189,7 +189,7 @@
                                         </a>
                                     </li>
                                 @endif
-                        
+
                                 @if (Helper::hasRight('user.view'))
                                     <li class="{{ Route::is('about.index') ? 'active' : '' }}">
                                         <a href="{{ route('about.index') }}">
