@@ -41,7 +41,7 @@
                                 </div>
 
                                 @if ($slider?->title)
-                                    <h4 class="heading text-30 fw-700 text-uppercase mb-4 slider_title" data-aos="fade-up">
+                                    <h4 class="heading text-20 fw-700 text-uppercase mb-4 slider_title" data-aos="fade-up">
                                         {{ $slider?->title }}
                                     </h4>
                                 @endif
