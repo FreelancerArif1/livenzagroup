@@ -180,7 +180,7 @@
                             <p class="ms-4">{{ trans('About Us') }}</p>
                             <span class="caret"></span>
                         </a>
-                        <div class="collapse @if (Route::is('about.index')) show @endif" id="aboutus">
+                        <div class="collapse @if (Route::is('about.index') || Route::is('partenr.index')) show @endif" id="aboutus">
                             <ul class="nav nav-collapse">
                                 @if (Helper::hasRight('role.view'))
                                     <li class="{{ Route::is('about.index') ? 'active' : '' }}">
@@ -191,8 +191,8 @@
                                 @endif
 
                                 @if (Helper::hasRight('user.view'))
-                                    <li class="{{ Route::is('about.index') ? 'active' : '' }}">
-                                        <a href="{{ route('about.index') }}">
+                                    <li class="{{ Route::is('partner.index') ? 'active' : '' }}">
+                                        <a href="{{ route('partner.index') }}">
                                             <span class="sub-item">{{ trans('Partners') }}</span>
                                         </a>
                                     </li>

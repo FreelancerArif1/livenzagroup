@@ -11,6 +11,7 @@ use Helper;
 use App\Models\User;
 use App\Models\Slider;
 use App\Models\Company;
+use App\Models\Partner;
 use App\Models\Portfolio;
 use Yajra\DataTables\DataTables;
 use App\Models\LeadingAndGovernor;
@@ -28,7 +29,11 @@ class FrontendController extends Controller
     public function about()
     {
         $about = About::where('id', 1)->first();
-        return view('frontend.pages.about', compact('about'));
+        $partners = Partner::where('status', 1)
+            ->orderBy('serial', 'asc')
+            ->get()
+            ->chunk(6);
+        return view('frontend.pages.about', compact('about', 'partners'));
     }
 
     public function singleCompany($slug)

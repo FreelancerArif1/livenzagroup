@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\CompanyController;
 use App\Http\Controllers\Backend\PortfolioController;
 use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\PartnerController;
 
 
 Route::get('/store-cache', function () {
@@ -111,6 +112,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/project-list', [ProjectController::class, 'list'])->name('admin.project.list');
     Route::resource('about', AboutController::class);
     Route::get('/about-list', [AboutController::class, 'list'])->name('admin.about.list');
+
+    Route::resource('partner', PartnerController::class);
+    Route::get('/partner-list', [PartnerController::class, 'list'])->name('admin.partner.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
