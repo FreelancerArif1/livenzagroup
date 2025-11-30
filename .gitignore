@@ -30,3 +30,4 @@ oldvue
 *.zip
 
 /public/uploads/settings
+/uploads/settings

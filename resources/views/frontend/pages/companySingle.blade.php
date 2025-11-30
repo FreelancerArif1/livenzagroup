@@ -48,9 +48,9 @@
                         <div class="col-md-3">
                             <div class="right_top_slider">
                                 @if ($slider?->right_title_1)
-                                    <h4 class="heading text-20 fw-700 text-uppercase mb-2" data-aos="fade-up">
+                                    <h6 class="heading text-20 fw-700 text-uppercase mb-2" data-aos="fade-up">
                                         <span class="heading_border">{{ $slider?->right_title_1 }}</span>
-                                    </h4>
+                                    </h6>
                                 @endif
                                 @if ($slider?->right_description_1)
                                     <div class="slider_main_paragraph" data-aos="fade-up" data-aos-delay="200">
@@ -61,9 +61,9 @@
 
                             <div class="right_bottom_slider">
                                 @if ($slider?->right_title_2)
-                                    <h4 class="heading text-20 fw-700 text-uppercase mb-2" data-aos="fade-up">
+                                    <h6 class="heading text-20 fw-700 text-uppercase mb-2" data-aos="fade-up">
                                         <span class="heading_border">{{ $slider?->right_title_2 }}</span>
-                                    </h4>
+                                    </h6>
                                 @endif
                                 @if ($slider?->right_description_2)
                                     <div class="slider_main_paragraph" data-aos="fade-up" data-aos-delay="200">
