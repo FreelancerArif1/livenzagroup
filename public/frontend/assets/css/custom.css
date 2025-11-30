@@ -323,3 +323,7 @@
     object-fit: contain;
     border: 2px solid #0033cc;
 }
+
+.slider_title {
+    line-height: 40px;
+}
