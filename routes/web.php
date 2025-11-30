@@ -117,6 +117,8 @@ Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logo
 //public routes
 Route::get('/', [FrontendController::class, 'home'])->name('home');
 Route::get('/about-us', [FrontendController::class, 'about'])->name('about');
+Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact');
+Route::post('/contact-submit', [FrontendController::class, 'contactsubmit'])->name('contact.submit');
 Route::get('/company/{slug}', [FrontendController::class, 'singleCompany'])->name('single.company');
 Route::get('/news', [FrontendController::class, 'news'])->name('news');
 Route::get('/news/{slug}', [FrontendController::class, 'singleNews'])->name('single.news');

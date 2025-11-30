@@ -17,6 +17,7 @@ use Yajra\DataTables\DataTables;
 use App\Models\Blog;
 use App\Models\Project;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class FrontendController extends Controller
@@ -66,5 +67,40 @@ class FrontendController extends Controller
         $single->created_by = $user?->username;
 
         return view('frontend.pages.blogSingle', compact('news', 'single'));
+    }
+    public function contact()
+    {
+        return view('frontend.pages.contact');
+    }
+
+    public function contactsubmit(Request $request)
+    {
+        request()->validate(
+            [
+                'name'    => 'required',
+                'email'   => 'required',
+                'phone'   => 'required',
+                'subject' => 'required',
+                'message' => 'required',
+            ],
+            [
+                'name.required'     => 'Name field is required.',
+                'email.required'    => 'Email field is required.',
+                'subject.required'  => 'Subject field is required.',
+            ]
+        );
+        $data['name']    = $request->name;
+        $data['subject']    = $request->subject;
+        $data['email']   = $request->email;
+        $data['phone']   =  $request->phone;
+        $data['message'] = $request->message;
+        $data['status'] = 1;
+        $inserted = DB::table('contact')->insert($data);
+
+        if ($inserted) {
+            return back()->with('success', 'Message sent successfully.');
+        } else {
+            return back()->with('error', 'Something went wrong. Please try again.');
+        }
     }
 }
