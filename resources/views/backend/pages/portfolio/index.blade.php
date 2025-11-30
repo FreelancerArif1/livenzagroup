@@ -11,7 +11,7 @@
         <div class="heading_button profile-heading">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 style="margin: 0;padding-top: 5px;    font-size: 18px;">Sliders</h1>
+                    <h1 style="margin: 0;padding-top: 5px;    font-size: 18px;">Portfolios</h1>
                 </div>
                 <div class="col-md-6 text-end">
                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#CreateModalOpen">Add
@@ -25,7 +25,7 @@
                     <tr>
                         <th></th>
                         <th>Title</th>
-                        <th>Company</th>
+                        <th>Portfolio</th>
                         <th>Serial</th>
                         <th>Status</th>
                         <th class="action_column">Action</th>
@@ -35,7 +35,7 @@
 
         </div>
     </div>
-    @include('backend.pages.slider.modal');
+    @include('backend.pages.portfolio.modal');
     <script>
         $(document).ready(function() {
 
@@ -59,7 +59,7 @@
                 ],
 
                 ajax: {
-                    url: "{{ route('admin.slider.list') }}",
+                    url: "{{ route('admin.portfolio.list') }}",
                     type: 'GET'
                 },
 
@@ -72,8 +72,8 @@
                         name: 'title'
                     },
                     {
-                        data: 'slier_for',
-                        name: 'slier_for'
+                        data: 'sub_title',
+                        name: 'sub_title'
                     },
                     {
                         data: 'serial',

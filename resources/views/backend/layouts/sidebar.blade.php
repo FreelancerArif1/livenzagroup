@@ -145,8 +145,8 @@
                                     </li>
                                 @endif
                                 @if (Helper::hasRight('right.view'))
-                                    <li class="{{ Route::is('admin.role.right') ? 'active' : '' }}">
-                                        <a href="{{ route('admin.role.right') }}">
+                                    <li class="{{ Route::is('portfolio.index') ? 'active' : '' }}">
+                                        <a href="{{ route('portfolio.index') }}">
                                             <span class="sub-item">{{ trans('Portfolios') }}</span>
                                         </a>
                                     </li>
