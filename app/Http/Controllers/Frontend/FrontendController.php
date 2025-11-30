@@ -28,9 +28,9 @@ class FrontendController extends Controller
     {
 
         $company = Company::where('slug', $slug)->first();
-        $portfolios = Portfolio::where('status', 1)->orderBy('serial', 'asc')->get();
-        $projects = Project::where('status', 1)->orderBy('serial', 'asc')->get();
-        $slider = Slider::where('status', 1)->first();
+        $portfolios = Portfolio::where('status', 1)->orderBy('serial', 'asc')->where('slier_for', $company->id)->get();
+        $projects = Project::where('status', 1)->orderBy('serial', 'asc')->where('slier_for', $company->id)->get();
+        $slider = Slider::where('slier_for', $company->id)->first();
         return view('frontend.pages.companySingle', compact('slider', 'company', 'portfolios', 'projects'));
     }
 }
