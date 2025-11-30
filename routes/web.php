@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\PortfolioController;
 use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\PartnerController;
+use App\Http\Controllers\Backend\BlogController;
 
 
 Route::get('/store-cache', function () {
@@ -75,14 +76,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::any('/right/update/{id}', [RoleController::class, 'roleRightUpdate'])->name('admin.role.right.update');
         Route::get('/right/delete/{id}', [RoleController::class, 'rightDelete'])->name('admin.role.right.delete');
     });
-    Route::group(['prefix' => '/news'], function () {
-        Route::get('/', [NewsController::class, 'index'])->name('admin.news');
-        Route::get('/get/list', [NewsController::class, 'getList']);
-        Route::post('/store', [NewsController::class, 'store'])->name('admin.news.store');
-        Route::get('/edit/{id}', [NewsController::class, 'edit'])->name('admin.news.edit');
-        Route::any('/update/{id}', [NewsController::class, 'update'])->name('admin.news.update');
-        Route::get('/delete/{id}', [NewsController::class, 'delete'])->name('admin.news.delete');
-    });
+
 
     Route::group(['prefix' => '/contact'], function () {
         Route::get('/', [ContactController::class, 'index'])->name('admin.contact');
@@ -115,6 +109,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('partner', PartnerController::class);
     Route::get('/partner-list', [PartnerController::class, 'list'])->name('admin.partner.list');
+    Route::resource('blog', BlogController::class);
+    Route::get('/blog-list', [BlogController::class, 'list'])->name('admin.blog.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
@@ -122,3 +118,5 @@ Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logo
 Route::get('/', [FrontendController::class, 'home'])->name('home');
 Route::get('/about-us', [FrontendController::class, 'about'])->name('about');
 Route::get('/company/{slug}', [FrontendController::class, 'singleCompany'])->name('single.company');
+Route::get('/news', [FrontendController::class, 'news'])->name('news');
+Route::get('/news/{slug}', [FrontendController::class, 'singleNews'])->name('single.news');

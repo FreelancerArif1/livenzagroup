@@ -202,6 +202,16 @@
                         </div>
                     </li>
                 @endif
+
+
+                @if (Helper::hasRight('dashboard.view'))
+                    <li class="nav-item {{ Route::is('blog.index') ? 'active' : '' }}">
+                        <a href="{{ route('blog.index') }}">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <p class="ms-4"><span class="sub-item">{{ trans('Blogs') }}</span></p>
+                        </a>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>
