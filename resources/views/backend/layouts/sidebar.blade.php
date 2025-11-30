@@ -177,7 +177,7 @@
                         <a data-bs-toggle="collapse" href="#aboutus"
                             aria-expanded="@if (Route::is('slider.index')) true @else false @endif">
                             <i class="fa fa-cog" aria-hidden="true"></i>
-                            <p class="ms-4">{{ trans('About U') }}</p>
+                            <p class="ms-4">{{ trans('About Us') }}</p>
                             <span class="caret"></span>
                         </a>
                         <div class="collapse @if (Route::is('slider.index')) show @endif" id="aboutus">
