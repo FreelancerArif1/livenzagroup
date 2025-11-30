@@ -20,24 +20,12 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Sub Title</label>
-                                <input type="text" class="form-control" name="sub_title"
-                                    placeholder="Enter sub title">
-                            </div>
-                        </div>
 
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea class="form-control tinymceText" name="description" placeholder="Enter description" rows="3"></textarea>
-                            </div>
-                        </div>
+
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Image (H:800px W:800px) </label>
+                                <label>Image (H:700px W:1000px) </label>
                                 <input type="file" class="form-control" name="image">
                             </div>
                         </div>
@@ -58,17 +46,21 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Website Link</label>
+                                <label>Button Name</label>
+                                <input type="text" class="form-control" name="button_text"
+                                    placeholder="Enter Website Link">
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Button Link</label>
                                 <input type="text" class="form-control" name="button_link"
                                     placeholder="Enter Website Link">
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Map Link</label>
-                                <input type="text" class="form-control" name="map" placeholder="Enter map link">
-                            </div>
-                        </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Serial</label>

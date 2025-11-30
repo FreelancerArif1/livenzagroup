@@ -3,7 +3,7 @@
         <!-- Logo Header -->
         <div class="logo-header" data-background-color="dark">
 
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : 'assets/img/Logo.png' }}"
                     alt="navbar brand" class="navbar-brand" height="20">
             </a>

@@ -75,7 +75,7 @@ class PortfolioController extends Controller
                 'errors' => $validator->errors(),
             ], 422);
         }
-        $data = $request->except(['video', 'image']);
+        $data = $request->except(['video', 'image', '_token']);
         if ($request->hasFile('image')) {
             $data['image'] = $this->fileUpload($request, 'image', '/uploads/portfolio/');
         }
@@ -188,8 +188,6 @@ class PortfolioController extends Controller
             'video' => 'nullable|mimes:mp4,mov,avi,webm,mkv|max:200000',
             'image' => 'nullable|mimes:jpg,jpeg,png,webp|max:2048',
             'youtube_video'  => 'nullable|url',
-            'sub_title'      => 'required',
-            'map'      => 'required',
             'serial'         => 'required|integer',
         ]);
         return $validator;

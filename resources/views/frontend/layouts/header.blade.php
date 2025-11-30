@@ -6,7 +6,7 @@
                     <drawer-menu>
                         <nav class="header-nav drawer-menu">
                             <div class="d-lg-none header-nav-headings">
-                                <a class="header-logo" href="#" aria-label="Consulo">
+                                <a class="header-logo" href="/" aria-label="Consulo">
                                 </a>
                                 <drawer-opener class="svg-wrapper menu-close" data-drawer=".drawer-menu">
                                     <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
@@ -25,7 +25,7 @@
                                 <div class="col-md-5 p-0">
                                     {{-- <ul class="header-menu list-unstyled leftside_navbs">
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#">
+                                            <a class="menu-link menu-link-main menu-accrodion" href="/">
                                                 Building a river of growth
                                             </a>
                                         </li>
@@ -36,39 +36,39 @@
                                                 data-aos-anchor=".footer-top">
 
                                                 <li>
-                                                    <a class="social-link text" href="#">
+                                                    <a class="social-link text" href="/">
                                                         <i class="fa fa-instagram" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="social-link text" href="#">
+                                                    <a class="social-link text" href="/">
                                                         <i class="fa fa-facebook" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="social-link text" href="#">
+                                                    <a class="social-link text" href="/">
                                                         <i class="bi bi-twitter-x"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="social-link text" href="#">
+                                                    <a class="social-link text" href="/">
                                                         <i class="bi bi-linkedin"></i>
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> Home </a>
+                                            <a class="menu-link menu-link-main" href="/"> Home </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> About Us
+                                            <a class="menu-link menu-link-main menu-accrodion" href="/"> About Us
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> Companies </a>
+                                            <a class="menu-link menu-link-main" href="/"> Companies </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#">
+                                            <a class="menu-link menu-link-main menu-accrodion" href="/">
                                                 Careers
                                             </a>
                                         </li>
@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="col-md-2 p-0 text-center">
                                     <li class="nav-item logo_li">
-                                        <a class="menu-link menu-link-main logo_link" href="#">
+                                        <a class="menu-link menu-link-main logo_link" href="/">
                                             <img src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}"
                                                 alt="logo-image">
                                         </a>
@@ -85,39 +85,39 @@
                                 <div class="col-md-5 p-0">
                                     {{-- <ul class="header-menu list-unstyled rightside_navbs">
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#">
+                                            <a class="menu-link menu-link-main menu-accrodion" href="/">
                                                 Newsletter
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> Media </a>
+                                            <a class="menu-link menu-link-main" href="/"> Media </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Tee Times
+                                            <a class="menu-link menu-link-main menu-accrodion" href="/"> Tee Times
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#">Hotel Reservation</a>
+                                            <a class="menu-link menu-link-main" href="/">Hotel Reservation</a>
                                         </li>
                                     </ul> --}}
                                     <ul class="header-menu list-unstyled rightside_navbs">
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#">
+                                            <a class="menu-link menu-link-main menu-accrodion" href="/">
                                                 Sustainability
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#"> News </a>
+                                            <a class="menu-link menu-link-main" href="/"> News </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main menu-accrodion" href="#"> Expansion
+                                            <a class="menu-link menu-link-main menu-accrodion" href="/"> Expansion
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="#">Contact</a>
+                                            <a class="menu-link menu-link-main" href="/">Contact</a>
                                         </li>
                                         <li class="nav-item shop_now_item">
-                                            <a class="menu-link menu-link-main menu-accrodion shop_now" href="#">
+                                            <a class="menu-link menu-link-main menu-accrodion shop_now" href="/">
                                                 Apply
                                             </a>
                                         </li>

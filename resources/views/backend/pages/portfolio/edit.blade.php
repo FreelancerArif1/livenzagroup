@@ -13,32 +13,16 @@
     <div class="modal-body">
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label>Title</label>
                     <input type="text" class="form-control" name="title" value="{{ $portfolio->title }}"
                         placeholder="Enter title">
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Sub Title</label>
-                    <input type="text" class="form-control" name="sub_title" value="{{ $portfolio->sub_title }}"
-                        placeholder="Enter sub title">
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label>Description</label>
-                    <textarea class="form-control tinymceText" name="description" placeholder="Enter description" rows="3">{!! $portfolio->description !!}</textarea>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Image (H:800px W:800px)</label>
+                    <label>Image (H:700px W:1000px) </label>
                     <input type="file" class="form-control" name="image">
                     @if ($portfolio->image)
                         <img src="{{ asset($portfolio->image) }}" width="120" height="120" class="mt-2">
@@ -57,27 +41,13 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>YouTube Video Link</label>
-                    <input type="text" class="form-control" name="youtube_video"
-                        value="{{ $portfolio->youtube_video }}" placeholder="Enter YouTube video link">
-                </div>
-            </div>
+
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Website Link</label>
+                    <label>Url</label>
                     <input type="text" class="form-control" name="button_link" value="{{ $portfolio->button_link }}"
                         placeholder="Enter Website Link">
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Map Link</label>
-                    <input type="text" class="form-control" name="map" value="{{ $portfolio->map }}"
-                        placeholder="Enter map link">
                 </div>
             </div>
 
@@ -86,6 +56,15 @@
                     <label>Serial</label>
                     <input type="text" class="form-control" name="serial" value="{{ $portfolio->serial }}"
                         placeholder="Enter serial">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Status</label>
+                    <select name="status" class="form-control">
+                        <option value="1" {{ $portfolio->status == 1 ? 'selected' : '' }}>Active</option>
+                        <option value="2" {{ $portfolio->status == 2 ? 'selected' : '' }}>Inactive</option>
+                    </select>
                 </div>
             </div>
 

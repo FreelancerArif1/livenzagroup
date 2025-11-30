@@ -151,6 +151,13 @@
                                         </a>
                                     </li>
                                 @endif
+                                @if (Helper::hasRight('right.view'))
+                                    <li class="{{ Route::is('project.index') ? 'active' : '' }}">
+                                        <a href="{{ route('project.index') }}">
+                                            <span class="sub-item">{{ trans('Projects') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
                                 @if (Helper::hasRight('user.view'))
                                     <li class="{{ Route::is('company.index') ? 'active' : '' }}">
                                         <a href="{{ route('company.index') }}">

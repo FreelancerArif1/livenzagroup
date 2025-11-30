@@ -13,6 +13,8 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\CompanyController;
 use App\Http\Controllers\Backend\PortfolioController;
+use App\Http\Controllers\Backend\ProjectController;
+
 
 Route::get('/store-cache', function () {
     try {
@@ -103,6 +105,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/company-list', [CompanyController::class, 'list'])->name('admin.company.list');
     Route::resource('portfolio', PortfolioController::class);
     Route::get('/portfolio-list', [PortfolioController::class, 'list'])->name('admin.portfolio.list');
+
+    Route::resource('project', ProjectController::class);
+    Route::get('/project-list', [ProjectController::class, 'list'])->name('admin.project.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 

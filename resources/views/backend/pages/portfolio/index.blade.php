@@ -25,7 +25,6 @@
                     <tr>
                         <th></th>
                         <th>Title</th>
-                        <th>Portfolio</th>
                         <th>Serial</th>
                         <th>Status</th>
                         <th class="action_column">Action</th>
@@ -70,10 +69,6 @@
                     {
                         data: 'title',
                         name: 'title'
-                    },
-                    {
-                        data: 'sub_title',
-                        name: 'sub_title'
                     },
                     {
                         data: 'serial',
