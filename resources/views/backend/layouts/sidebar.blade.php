@@ -212,6 +212,15 @@
                         </a>
                     </li>
                 @endif
+                @if (Helper::hasRight('dashboard.view'))
+                    <li class="nav-item {{ Route::is('sustainability.index') ? 'active' : '' }}">
+                        <a href="{{ route('sustainability.index') }}">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <p class="ms-4"><span class="sub-item">{{ trans('Sustainability') }}</span></p>
+                        </a>
+                    </li>
+                @endif
+
             </ul>
         </div>
     </div>

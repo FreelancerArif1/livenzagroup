@@ -17,6 +17,7 @@ use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\SustainabilityController;
 
 
 Route::get('/store-cache', function () {
@@ -111,6 +112,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/partner-list', [PartnerController::class, 'list'])->name('admin.partner.list');
     Route::resource('blog', BlogController::class);
     Route::get('/blog-list', [BlogController::class, 'list'])->name('admin.blog.list');
+
+    Route::resource('sustainability', SustainabilityController::class);
+    Route::get('/sustainability-list', [SustainabilityController::class, 'list'])->name('admin.sustainability.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
@@ -122,3 +126,4 @@ Route::post('/contact-submit', [FrontendController::class, 'contactsubmit'])->na
 Route::get('/company/{slug}', [FrontendController::class, 'singleCompany'])->name('single.company');
 Route::get('/news', [FrontendController::class, 'news'])->name('news');
 Route::get('/news/{slug}', [FrontendController::class, 'singleNews'])->name('single.news');
+Route::get('/sustainability', [FrontendController::class, 'sustainability'])->name('sustainability');

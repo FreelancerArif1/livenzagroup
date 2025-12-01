@@ -383,3 +383,12 @@
 .sidebar-widget {
     --color-background: rgb(2 52 201 / 5%);
 }
+
+.section-headings .promotion-lists,
+.section-headings .text-lists,
+.section-headings .list-block,
+.section-headings .heading+.text {
+    -webkit-margin-before: 20px;
+    margin-block-start: 20px;
+    text-align: justify;
+}

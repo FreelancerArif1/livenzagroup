@@ -13,6 +13,7 @@ use App\Models\Slider;
 use App\Models\Company;
 use App\Models\Partner;
 use App\Models\Portfolio;
+use App\Models\Sustainability;
 use Yajra\DataTables\DataTables;
 use App\Models\Blog;
 use App\Models\Project;
@@ -102,5 +103,10 @@ class FrontendController extends Controller
         } else {
             return back()->with('error', 'Something went wrong. Please try again.');
         }
+    }
+    public function sustainability()
+    {
+        $sustainability = Sustainability::where('id', 1)->first();
+        return view('frontend.pages.sustainability', compact('sustainability'));
     }
 }
