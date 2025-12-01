@@ -833,3 +833,7 @@ class TestiColumnSlider extends HTMLElement {
 }
 
 customElements.define("testicolumn-slider", TestiColumnSlider);
+
+
+
+

@@ -43,8 +43,13 @@
                     <label>Banner Video</label>
                     <input type="file" class="form-control" name="banner_video">
                     @if ($sustainability->banner_video)
-                        <video src="{{ asset($sustainability->banner_video) }}" width="100%" height="120" controls
-                            class="mt-2"></video>
+                        <div class="video_relative banner_video">
+                            <video src="{{ asset($sustainability->banner_video) }}" width="100%" height="120"
+                                controls class="mt-2"></video>
+                            <div class="video_remove_absulate" data-table="sustainabilities"
+                                data-id="{{ $sustainability?->id }}" data-column="banner_video"> <i class="fa fa-trash"
+                                    aria-hidden="true"></i> </div>
+                        </div>
                     @endif
                 </div>
             </div>
@@ -83,8 +88,13 @@
                     <label>Block One Video</label>
                     <input type="file" class="form-control" name="block_one_video">
                     @if ($sustainability->block_one_video)
-                        <video src="{{ asset($sustainability->block_one_video) }}" width="100%" height="120"
-                            controls class="mt-2"></video>
+                        <div class="video_relative block_one_video">
+                            <video src="{{ asset($sustainability->block_one_video) }}" width="100%" height="120"
+                                controls class="mt-2"></video>
+                            <div class="video_remove_absulate" data-table="sustainabilities"
+                                data-id="{{ $sustainability?->id }}" data-column="block_one_video"> <i
+                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                        </div>
                     @endif
                 </div>
             </div>
@@ -123,8 +133,13 @@
                     <label>Block Two Video</label>
                     <input type="file" class="form-control" name="block_two_video">
                     @if ($sustainability->block_two_video)
-                        <video src="{{ asset($sustainability->block_two_video) }}" width="100%" height="120"
-                            controls class="mt-2"></video>
+                        <div class="video_relative block_two_video>
+                            <video src="{{ asset($sustainability->block_two_video) }}"
+                            width="100%" height="120" controls class="mt-2"></video>
+                            <div class="video_remove_absulate" data-table="sustainabilities"
+                                data-id="{{ $sustainability?->id }}" data-column="block_two_video"> <i
+                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                        </div>
                     @endif
                 </div>
             </div>
@@ -162,8 +177,13 @@
                     <label>Block Three Video</label>
                     <input type="file" class="form-control" name="block_three_video">
                     @if ($sustainability->block_three_video)
-                        <video src="{{ asset($sustainability->block_three_video) }}" width="100%" height="120"
-                            controls class="mt-2"></video>
+                        <div class="video_relative block_three_video">
+                            <video src="{{ asset($sustainability->block_three_video) }}" width="100%"
+                                height="120" controls class="mt-2"></video>
+                            <div class="video_remove_absulate" data-table="sustainabilities"
+                                data-id="{{ $sustainability?->id }}" data-column="block_three_video"> <i
+                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                        </div>
                     @endif
                 </div>
             </div>
@@ -202,8 +222,13 @@
                     <label>Block Four Video</label>
                     <input type="file" class="form-control" name="block_four_video">
                     @if ($sustainability->block_four_video)
-                        <video src="{{ asset($sustainability->block_four_video) }}" width="100%" height="120"
-                            controls class="mt-2"></video>
+                        <div class="video_relative block_four_video">
+                            <video src="{{ asset($sustainability->block_four_video) }}" width="100%"
+                                height="120" controls class="mt-2"></video>
+                            <div class="video_remove_absulate" data-table="sustainabilities"
+                                data-id="{{ $sustainability?->id }}" data-column="block_four_video"> <i
+                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                        </div>
                     @endif
                 </div>
             </div>
@@ -243,8 +268,13 @@
                     <label>Block Five Video</label>
                     <input type="file" class="form-control" name="block_five_video">
                     @if ($sustainability->block_five_video)
-                        <video src="{{ asset($sustainability->block_five_video) }}" width="100%" height="120"
-                            controls class="mt-2"></video>
+                        <div class="video_relative block_five_video">
+                            <video src="{{ asset($sustainability->block_five_video) }}" width="100%"
+                                height="120" controls class="mt-2"></video>
+                            <div class="video_remove_absulate" data-table="sustainabilities"
+                                data-id="{{ $sustainability?->id }}" data-column="block_five_video"> <i
+                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                        </div>
                     @endif
                 </div>
             </div>

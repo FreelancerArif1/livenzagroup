@@ -86,4 +86,58 @@
     </script>
 
     <script src="{{ asset('/backend/js/') }}/action.js"></script>
+
+    <script>
+        $(document).on('click', '.video_remove_absulate', function(e) {
+            e.preventDefault();
+
+
+            const table = $(this).data('table');
+            const column = $(this).data('column');
+            const id = $(this).data('id');
+
+            Swal.fire({
+                title: 'Are you sure to delete?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '/admin/empty-a-table-column',
+                        type: 'POST', // must be POST
+                        data: {
+                            _token: $('meta[name="csrf-token"]').attr('content'),
+                            table: table,
+                            id: id,
+                            column: column,
+                        },
+                        success: function(response) {
+                            if (response.status == 1) {
+                                Swal.fire({
+                                    title: 'Deleted!',
+                                    text: response.message,
+                                    icon: 'success',
+                                    timer: 1500,
+                                    showConfirmButton: false
+                                }).then(() => {
+                                    $('.' + column).hide();
+                                    // window.location
+                                    //     .reload();
+                                });
+                            } else {
+                                Swal.fire('Error', response.message, 'error');
+                            }
+                        },
+                        error: function(xhr) {
+                            Swal.fire('Error', 'Something went wrong!', 'error');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 @endsection

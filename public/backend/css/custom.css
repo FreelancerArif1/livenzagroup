@@ -4,3 +4,19 @@
     border-radius: 10px;
     border: 1px solid #cacacd;
 }
+
+
+.video_relative {
+    position: relative;
+}
+
+.video_remove_absulate {
+    position: absolute;
+    z-index: 99;
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background: #f00;
+    color: #fff;
+    cursor: pointer;
+}

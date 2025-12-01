@@ -12,6 +12,7 @@ use App\Models\Sustainability;
 use Yajra\DataTables\DataTables;
 use App\Models\LeadingAndGovernor;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Laravel\Facades\Image;
 use Illuminate\Support\Str;
@@ -25,6 +26,16 @@ class SustainabilityController extends Controller
     {
 
         return view('backend.pages.sustainability.index');
+    }
+
+    public function emptyATableColumn(Request $request)
+    {
+        DB::table($request->table)->where('id', $request->id)->update([$request->column => null]);
+        return response()->json([
+            'type' => 'success',
+            'status' => 1,
+            'message' => 'Deleted successfully!',
+        ], 200);
     }
     public function list(Request $request)
     {
@@ -219,12 +230,69 @@ class SustainabilityController extends Controller
     {
         $sustainability = Sustainability::findOrFail($id);
         if ($sustainability) {
-            if ($sustainability->banner_image && File::exists(public_path($sustainability->banner_image))) {
-                File::delete(public_path($sustainability->banner_image));
+            $basePath = 'uploads/sustainability/';
+
+            // Banner
+            if ($sustainability->banner_image && File::exists(public_path($basePath . $sustainability->banner_image))) {
+                File::delete(public_path($basePath . $sustainability->banner_image));
             }
-            if ($sustainability->block_one_image && File::exists(public_path($sustainability->block_one_image))) {
-                File::delete(public_path($sustainability->block_one_image));
+
+            if ($sustainability->banner_video && File::exists(public_path($basePath . $sustainability->banner_video))) {
+                File::delete(public_path($basePath . $sustainability->banner_video));
             }
+
+
+            // Block One
+            if ($sustainability->block_one_image && File::exists(public_path($basePath . $sustainability->block_one_image))) {
+                File::delete(public_path($basePath . $sustainability->block_one_image));
+            }
+
+            if ($sustainability->block_one_video && File::exists(public_path($basePath . $sustainability->block_one_video))) {
+                File::delete(public_path($basePath . $sustainability->block_one_video));
+            }
+
+
+            // Block Two
+            if ($sustainability->block_two_image && File::exists(public_path($basePath . $sustainability->block_two_image))) {
+                File::delete(public_path($basePath . $sustainability->block_two_image));
+            }
+
+            if ($sustainability->block_two_video && File::exists(public_path($basePath . $sustainability->block_two_video))) {
+                File::delete(public_path($basePath . $sustainability->block_two_video));
+            }
+
+
+            // Block Three
+            if ($sustainability->block_three_image && File::exists(public_path($basePath . $sustainability->block_three_image))) {
+                File::delete(public_path($basePath . $sustainability->block_three_image));
+            }
+
+            if ($sustainability->block_three_video && File::exists(public_path($basePath . $sustainability->block_three_video))) {
+                File::delete(public_path($basePath . $sustainability->block_three_video));
+            }
+
+
+            // Block Four
+            if ($sustainability->block_four_image && File::exists(public_path($basePath . $sustainability->block_four_image))) {
+                File::delete(public_path($basePath . $sustainability->block_four_image));
+            }
+
+            if ($sustainability->block_four_video && File::exists(public_path($basePath . $sustainability->block_four_video))) {
+                File::delete(public_path($basePath . $sustainability->block_four_video));
+            }
+
+
+            // Block Five
+            if ($sustainability->block_five_image && File::exists(public_path($basePath . $sustainability->block_five_image))) {
+                File::delete(public_path($basePath . $sustainability->block_five_image));
+            }
+
+            if ($sustainability->block_five_video && File::exists(public_path($basePath . $sustainability->block_five_video))) {
+                File::delete(public_path($basePath . $sustainability->block_five_video));
+            }
+
+
+
             $sustainability->delete();
 
             return response()->json([

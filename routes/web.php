@@ -112,7 +112,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/partner-list', [PartnerController::class, 'list'])->name('admin.partner.list');
     Route::resource('blog', BlogController::class);
     Route::get('/blog-list', [BlogController::class, 'list'])->name('admin.blog.list');
-
+    Route::post('/empty-a-table-column',  [SustainabilityController::class, 'emptyATableColumn']);
     Route::resource('sustainability', SustainabilityController::class);
     Route::get('/sustainability-list', [SustainabilityController::class, 'list'])->name('admin.sustainability.list');
 });
