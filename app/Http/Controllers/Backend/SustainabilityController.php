@@ -31,6 +31,12 @@ class SustainabilityController extends Controller
     public function emptyATableColumn(Request $request)
     {
         DB::table($request->table)->where('id', $request->id)->update([$request->column => null]);
+        $basePath = 'uploads/sustainability/';
+        $file = $request->file;
+        $filename = explode('/', $file);
+        $filename = end($filename);
+        File::delete(public_path($basePath . $filename));
+
         return response()->json([
             'type' => 'success',
             'status' => 1,

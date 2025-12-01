@@ -47,7 +47,8 @@
                             <video src="{{ asset($sustainability->banner_video) }}" width="100%" height="120"
                                 controls class="mt-2"></video>
                             <div class="video_remove_absulate" data-table="sustainabilities"
-                                data-id="{{ $sustainability?->id }}" data-column="banner_video"> <i class="fa fa-trash"
+                                data-id="{{ $sustainability?->id }}" data-column="banner_video"
+                                data-file="{{ $sustainability->banner_video }}"> <i class="fa fa-trash"
                                     aria-hidden="true"></i> </div>
                         </div>
                     @endif
@@ -92,8 +93,8 @@
                             <video src="{{ asset($sustainability->block_one_video) }}" width="100%" height="120"
                                 controls class="mt-2"></video>
                             <div class="video_remove_absulate" data-table="sustainabilities"
-                                data-id="{{ $sustainability?->id }}" data-column="block_one_video"> <i
-                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                                data-id="{{ $sustainability?->id }}" data-file="{{ $sustainability->block_one_video }}"
+                                data-column="block_one_video"> <i class="fa fa-trash" aria-hidden="true"></i> </div>
                         </div>
                     @endif
                 </div>
@@ -137,7 +138,8 @@
                             <video src="{{ asset($sustainability->block_two_video) }}"
                             width="100%" height="120" controls class="mt-2"></video>
                             <div class="video_remove_absulate" data-table="sustainabilities"
-                                data-id="{{ $sustainability?->id }}" data-column="block_two_video"> <i
+                                data-id="{{ $sustainability?->id }}"
+                                data-file="{{ $sustainability->block_two_video }}" data-column="block_two_video"> <i
                                     class="fa fa-trash" aria-hidden="true"></i> </div>
                         </div>
                     @endif
@@ -181,8 +183,10 @@
                             <video src="{{ asset($sustainability->block_three_video) }}" width="100%"
                                 height="120" controls class="mt-2"></video>
                             <div class="video_remove_absulate" data-table="sustainabilities"
-                                data-id="{{ $sustainability?->id }}" data-column="block_three_video"> <i
-                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                                data-id="{{ $sustainability?->id }}"
+                                data-file="{{ $sustainability->block_three_video }}" data-column="block_three_video">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </div>
                         </div>
                     @endif
                 </div>
@@ -225,9 +229,9 @@
                         <div class="video_relative block_four_video">
                             <video src="{{ asset($sustainability->block_four_video) }}" width="100%"
                                 height="120" controls class="mt-2"></video>
-                            <div class="video_remove_absulate" data-table="sustainabilities"
-                                data-id="{{ $sustainability?->id }}" data-column="block_four_video"> <i
-                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                            <div class="video_remove_absulate" data-file="{{ $sustainability->block_four_video }}"
+                                data-table="sustainabilities" data-id="{{ $sustainability?->id }}"
+                                data-column="block_four_video"> <i class="fa fa-trash" aria-hidden="true"></i> </div>
                         </div>
                     @endif
                 </div>
@@ -271,9 +275,9 @@
                         <div class="video_relative block_five_video">
                             <video src="{{ asset($sustainability->block_five_video) }}" width="100%"
                                 height="120" controls class="mt-2"></video>
-                            <div class="video_remove_absulate" data-table="sustainabilities"
-                                data-id="{{ $sustainability?->id }}" data-column="block_five_video"> <i
-                                    class="fa fa-trash" aria-hidden="true"></i> </div>
+                            <div class="video_remove_absulate" data-file="{{ $sustainability->block_five_video }}"
+                                data-table="sustainabilities" data-id="{{ $sustainability?->id }}"
+                                data-column="block_five_video"> <i class="fa fa-trash" aria-hidden="true"></i> </div>
                         </div>
                     @endif
                 </div>

@@ -94,6 +94,7 @@
 
             const table = $(this).data('table');
             const column = $(this).data('column');
+            const file = $(this).data('file');
             const id = $(this).data('id');
 
             Swal.fire({
@@ -114,6 +115,7 @@
                             table: table,
                             id: id,
                             column: column,
+                            file: file,
                         },
                         success: function(response) {
                             if (response.status == 1) {
