@@ -5,12 +5,19 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
     <meta property="og:title" content="{{ Helper::getSettings('application_name') }}">
     <meta property="og:description" content="{{ Helper::getSettings('application_toll_free') }}">
+    <meta property="og:url" content="https://livenzagroup.com">
     <meta property="og:image"
         content="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}">
-    <meta property="og:url" content="https://livenzagroup.com">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
     <meta property="og:type" content="website">
+
+
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ Helper::getSettings('application_name') }}">
     <meta name="twitter:description" content="{{ Helper::getSettings('application_toll_free') }}">
