@@ -110,10 +110,11 @@
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main" href="/news"> News </a>
                                         </li>
-                                        {{-- <li class="nav-item">
+                                        <li class="nav-item">
                                             <a class="menu-link menu-link-main menu-accrodion" href="/"> Expansion
                                             </a>
-                                        </li> --}}
+                                        </li>
+
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main" href="/contact-us">Contact</a>
                                         </li>
