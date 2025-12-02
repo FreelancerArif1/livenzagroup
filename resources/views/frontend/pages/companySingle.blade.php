@@ -187,7 +187,7 @@
 
 
 
-        @if ($projects)
+        @if ($projects && count($projects) > 0)
             <project-slider class="project-slider section-padding">
                 <div class="container">
                     <div class="section-headings headings-width text-center">
