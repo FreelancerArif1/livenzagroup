@@ -40,13 +40,28 @@ class FrontendController extends Controller
 
     public function singleCompany($slug)
     {
-
         $company = Company::where('slug', $slug)->first();
         $portfolios = Portfolio::where('status', 1)->orderBy('serial', 'asc')->where('slier_for', $company->id)->get();
         $projects = Project::where('status', 1)->orderBy('serial', 'asc')->where('slier_for', $company->id)->get();
         $slider = Slider::where('slier_for', $company->id)->first();
         return view('frontend.pages.companySingle', compact('slider', 'company', 'portfolios', 'projects'));
     }
+
+
+    public function companies()
+    {
+        $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
+        foreach ($companies as $company) {
+            $slider = Slider::where('slier_for', $company->id)->select('slier_for', 'id', 'company_logo', 'image')->first();
+            $company->company_logo = $slider?->company_logo;
+        }
+
+        
+        return view('frontend.pages.companies', compact('companies'));
+    }
+
+
+
 
     public function news()
     {

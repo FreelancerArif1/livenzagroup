@@ -392,3 +392,15 @@
     margin-block-start: 20px;
     text-align: justify;
 }
+
+.copmany_card {
+    border: 1px solid #00000017;
+    padding: 20px;
+    height: 250px;
+}
+
+.copmany_card img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}

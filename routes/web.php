@@ -127,3 +127,4 @@ Route::get('/company/{slug}', [FrontendController::class, 'singleCompany'])->nam
 Route::get('/news', [FrontendController::class, 'news'])->name('news');
 Route::get('/news/{slug}', [FrontendController::class, 'singleNews'])->name('single.news');
 Route::get('/sustainability', [FrontendController::class, 'sustainability'])->name('sustainability');
+Route::get('/companies', [FrontendController::class, 'companies'])->name('companies');

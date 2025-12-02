@@ -19,5 +19,6 @@ class Company extends Model
         'serial',
         'status',
         'slug',
+        'company_name'
     ];
 }

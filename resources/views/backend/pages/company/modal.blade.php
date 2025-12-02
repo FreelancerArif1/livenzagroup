@@ -58,11 +58,19 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>Company Name</label>
+                                <input type="text" class="form-control" name="company_name"
+                                    placeholder="Enter company name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label>Website Link</label>
                                 <input type="text" class="form-control" name="button_link"
                                     placeholder="Enter Website Link">
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Map Link</label>

@@ -66,7 +66,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="/"> Companies </a>
+                                            <a class="menu-link menu-link-main" href="/companies"> Companies </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main menu-accrodion" href="/">

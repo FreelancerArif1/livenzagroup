@@ -64,7 +64,13 @@
                         value="{{ $company->youtube_video }}" placeholder="Enter YouTube video link">
                 </div>
             </div>
-
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" class="form-control" name="company_name" value="{{ $company->company_name }}"
+                        placeholder="Enter company name">
+                </div>
+            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Website Link</label>
