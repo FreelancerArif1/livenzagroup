@@ -404,3 +404,54 @@
     height: 100%;
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Parallax Section */
+.video-parallax {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    /* Change height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Fixed Background Video */
+.video-parallax .video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Behind content */
+    pointer-events: none;
+}
+
+/* Content Layer */
+.video-parallax .content {
+    z-index: 2;
+    text-align: center;
+}
+
+/* Regular section after video */
+.normal-content {
+    padding: 80px 20px;
+    background: #fff;
+    color: #222;
+}
