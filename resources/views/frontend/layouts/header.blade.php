@@ -103,13 +103,14 @@
                                     </ul> --}}
                                     <ul class="header-menu list-unstyled rightside_navbs">
                                         <li class="nav-item">
+                                            <a class="menu-link menu-link-main" href="/news"> News </a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="menu-link menu-link-main menu-accrodion" href="/sustainability">
                                                 Sustainability
                                             </a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="menu-link menu-link-main" href="/news"> News </a>
-                                        </li>
+
                                         <li class="nav-item">
                                             <a class="menu-link menu-link-main menu-accrodion" href="/"> Expansion
                                             </a>
