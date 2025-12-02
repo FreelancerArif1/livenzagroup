@@ -14,6 +14,7 @@ use App\Models\Company;
 use App\Models\Partner;
 use App\Models\Portfolio;
 use App\Models\Sustainability;
+use App\Models\Careerpage;
 use Yajra\DataTables\DataTables;
 use App\Models\Blog;
 use App\Models\Project;
@@ -56,7 +57,7 @@ class FrontendController extends Controller
             $company->company_logo = $slider?->company_logo;
         }
 
-        
+
         return view('frontend.pages.companies', compact('companies'));
     }
 
@@ -123,5 +124,10 @@ class FrontendController extends Controller
     {
         $sustainability = Sustainability::where('id', 1)->first();
         return view('frontend.pages.sustainability', compact('sustainability'));
+    }
+    public function careers()
+    {
+        $career = Careerpage::where('id', 1)->first();
+        return view('frontend.pages.career', compact('career'));
     }
 }

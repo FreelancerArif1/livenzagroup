@@ -221,6 +221,38 @@
                     </li>
                 @endif
 
+
+                @if (Helper::hasRight('setting.view'))
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#career"
+                            aria-expanded="@if (Route::is('slider.index')) true @else false @endif">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p class="ms-4">{{ trans('Career') }}</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse @if (Route::is('careerpage.index') || Route::is('careerpage.index')) show @endif" id="career">
+                            <ul class="nav nav-collapse">
+                                @if (Helper::hasRight('role.view'))
+                                    <li class="{{ Route::is('careerpage.index') ? 'active' : '' }}">
+                                        <a href="{{ route('careerpage.index') }}">
+                                            <span class="sub-item">{{ trans('Career Page') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                                {{-- @if (Helper::hasRight('user.view'))
+                                    <li class="{{ Route::is('partner.index') ? 'active' : '' }}">
+                                        <a href="{{ route('partner.index') }}">
+                                            <span class="sub-item">{{ trans('Partners') }}</span>
+                                        </a>
+                                    </li>
+                                @endif --}}
+
+                            </ul>
+                        </div>
+                    </li>
+                @endif
+
             </ul>
         </div>
     </div>

@@ -18,6 +18,7 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\SustainabilityController;
+use App\Http\Controllers\Backend\CareerpageController;
 
 
 Route::get('/store-cache', function () {
@@ -115,6 +116,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::post('/empty-a-table-column',  [SustainabilityController::class, 'emptyATableColumn']);
     Route::resource('sustainability', SustainabilityController::class);
     Route::get('/sustainability-list', [SustainabilityController::class, 'list'])->name('admin.sustainability.list');
+    Route::resource('careerpage', CareerpageController::class);
+    Route::get('/careerpage-list', [CareerpageController::class, 'list'])->name('admin.careerpage.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
@@ -128,3 +131,4 @@ Route::get('/news', [FrontendController::class, 'news'])->name('news');
 Route::get('/news/{slug}', [FrontendController::class, 'singleNews'])->name('single.news');
 Route::get('/sustainability', [FrontendController::class, 'sustainability'])->name('sustainability');
 Route::get('/companies', [FrontendController::class, 'companies'])->name('companies');
+Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
