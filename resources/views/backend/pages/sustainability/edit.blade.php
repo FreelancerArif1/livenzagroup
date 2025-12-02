@@ -30,7 +30,7 @@
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Banner Image</label>
+                    <label>Banner Image (H:750px W:1000px)</label>
                     <input type="file" class="form-control" name="banner_image">
                     @if ($sustainability->banner_image)
                         <img src="{{ asset($sustainability->banner_image) }}" width="120" class="mt-2">
@@ -76,7 +76,7 @@
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Block One Image</label>
+                    <label>Block One Image (H:750px W:1000px)</label>
                     <input type="file" class="form-control" name="block_one_image">
                     @if ($sustainability->block_one_image)
                         <img src="{{ asset($sustainability->block_one_image) }}" width="120" class="mt-2">
@@ -121,7 +121,7 @@
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Block Two Image</label>
+                    <label>Block Two Image (H:750px W:1000px)</label>
                     <input type="file" class="form-control" name="block_two_image">
                     @if ($sustainability->block_two_image)
                         <img src="{{ asset($sustainability->block_two_image) }}" width="120" class="mt-2">
@@ -166,7 +166,7 @@
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Block Three Image</label>
+                    <label>Block Three Image (H:750px W:1000px)</label>
                     <input type="file" class="form-control" name="block_three_image">
                     @if ($sustainability->block_three_image)
                         <img src="{{ asset($sustainability->block_three_image) }}" width="120" class="mt-2">
@@ -213,7 +213,7 @@
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Block Four Image</label>
+                    <label>Block Four Image (H:750px W:1000px)</label>
                     <input type="file" class="form-control" name="block_four_image">
                     @if ($sustainability->block_four_image)
                         <img src="{{ asset($sustainability->block_four_image) }}" width="120" class="mt-2">
@@ -259,7 +259,7 @@
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Block Five Image</label>
+                    <label>Block Five Image (H:750px W:1000px)</label>
                     <input type="file" class="form-control" name="block_five_image">
                     @if ($sustainability->block_five_image)
                         <img src="{{ asset($sustainability->block_five_image) }}" width="120" class="mt-2">

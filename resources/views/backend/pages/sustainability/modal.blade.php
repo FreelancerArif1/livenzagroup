@@ -34,7 +34,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Banner Image (H:800px W:800px)</label>
+                                <label>Banner Image (H:750px W:1000px)</label>
                                 <input type="file" class="form-control" name="banner_image">
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Block One Image (H:800px W:800px)</label>
+                                <label>Block One Image (H:750px W:1000px)</label>
                                 <input type="file" class="form-control" name="block_one_image">
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Block Two Image (H:800px W:800px)</label>
+                                <label>Block Two Image (H:750px W:1000px)</label>
                                 <input type="file" class="form-control" name="block_two_image">
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Block Three Image (H:800px W:800px)</label>
+                                <label>Block Three Image (H:750px W:1000px)</label>
                                 <input type="file" class="form-control" name="block_three_image">
                             </div>
                         </div>
@@ -171,7 +171,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Block Four Image (H:800px W:800px)</label>
+                                <label>Block Four Image (H:750px W:1000px)</label>
                                 <input type="file" class="form-control" name="block_four_image">
                             </div>
                         </div>
@@ -207,7 +207,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Block Five Image (H:800px W:800px)</label>
+                                <label>Block Five Image (H:750px W:1000px)</label>
                                 <input type="file" class="form-control" name="block_five_image">
                             </div>
                         </div>
