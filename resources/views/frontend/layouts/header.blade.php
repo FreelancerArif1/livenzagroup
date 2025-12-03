@@ -120,7 +120,7 @@
                                             <a class="menu-link menu-link-main" href="/contact-us">Contact</a>
                                         </li>
                                         <li class="nav-item shop_now_item">
-                                            <a href="{{ route('career.single', 'apply-a-position') }}"
+                                            <a href="{{ route('career.single', 'laravel-developer') }}"
                                                 class="menu-link menu-link-main menu-accrodion shop_now" href="/">
                                                 Apply
                                             </a>
