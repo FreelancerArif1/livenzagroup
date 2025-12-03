@@ -140,3 +140,4 @@ Route::get('/sustainability', [FrontendController::class, 'sustainability'])->na
 Route::get('/companies', [FrontendController::class, 'companies'])->name('companies');
 Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
 Route::get('/careers/{slug}', [FrontendController::class, 'careerSingle'])->name('career.single');
+Route::post('/career-submit', [FrontendController::class, 'careerSubmit'])->name('career.submit');

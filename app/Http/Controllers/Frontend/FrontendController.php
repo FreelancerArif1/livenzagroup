@@ -22,6 +22,12 @@ use App\Models\Project;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use App\Models\JobApplied;
+use App\Models\LeadingAndGovernor;
+
+use Intervention\Image\Laravel\Facades\Image;
+use Illuminate\Support\Str;
+
 
 class FrontendController extends Controller
 {
@@ -139,5 +145,66 @@ class FrontendController extends Controller
         $career = Careerpage::where('id', 1)->first();
         $singlecircular = JobCircular::where('job_slug', $slug)->first();
         return view('frontend.pages.careerSingle', compact('singlecircular', 'career', 'positions'));
+    }
+
+    protected function fileUpload($request, $file_name, $folder)
+    {
+        if (!$request->hasFile($file_name)) {
+            return null;
+        }
+
+        $file = $request->file($file_name);
+        $extension = strtolower($file->getClientOriginalExtension());
+        $filename = uniqid() . '_' . time() . '.' . $extension;
+
+        if (!file_exists(public_path($folder))) {
+            mkdir(public_path($folder), 0777, true);
+        }
+
+        $full_path = public_path($folder . $filename);
+
+        $image_extensions = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+        $video_extensions = ['mp4', 'mov', 'avi', 'webm', 'mkv'];
+        $document_extensions = ['pdf', 'doc', 'docx'];
+
+        if (in_array($extension, $image_extensions)) {
+
+            // Image upload
+            Image::read($file)->save($full_path);
+        } elseif (in_array($extension, $video_extensions)) {
+
+            // Video upload
+            $file->move(public_path($folder), $filename);
+        } elseif (in_array($extension, $document_extensions)) {
+
+            // Document upload
+            $file->move(public_path($folder), $filename);
+        } else {
+            return null; // unsupported file type
+        }
+
+        return $folder . $filename;
+    }
+    public function careerSubmit(Request $request)
+    {
+        // Validate normally (auto redirects back with errors)
+        $validated = $request->validate([
+            'name'         => 'required',
+            'email'        => 'required|email',
+            'phone'        => 'required',
+            'job_id'       => 'required|integer',
+            'cover_later'  => 'required',
+            'cv'           => 'required|mimes:pdf,doc,docx|max:102400',
+        ]);
+
+        // Upload CV
+        if ($request->hasFile('cv')) {
+            $validated['cv'] = $this->fileUpload($request, 'cv', '/uploads/careerapply/');
+        }
+
+        // Save
+        JobApplied::create($validated);
+
+        return redirect()->back()->with('success', 'Job applied successfully!');
     }
 }

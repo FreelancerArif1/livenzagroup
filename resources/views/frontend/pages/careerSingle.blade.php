@@ -19,13 +19,13 @@
         }
 
         /* .button--secondary {
-                                                                                                                            color: #fff;
-                                                                                                                            background-color: rgb(8 68 186);
-                                                                                                                        }
+                                                                                                                                                                                    color: #fff;
+                                                                                                                                                                                    background-color: rgb(8 68 186);
+                                                                                                                                                                                }
 
-                                                                                                                        .button--secondary .svg-wrapper {
-                                                                                                                            color: #fff;
-                                                                                                                        } */
+                                                                                                                                                                                .button--secondary .svg-wrapper {
+                                                                                                                                                                                    color: #fff;
+                                                                                                                                                                                } */
     </style>
     <main id="career_page">
         <div class="page-banner overlay">
@@ -92,36 +92,36 @@
                         <div class="col-12 col-lg-6 col-contact-form">
                             <div class="contact-form-wrap radius18">
                                 <div class="contact-form-headings text-center">
-                                    <h4 class="heading text-32" data-aos="fade-up">
+                                    {{-- <h4 class="heading text-32" data-aos="fade-up">
                                         APPLY
-                                    </h4>
+                                    </h4> --}}
                                     {{-- <p class="text text-16" data-aos="fade-up">
                                         Feel free to contact with us, we don't spam your email
                                     </p> --}}
                                 </div>
-                                <form action="{{ route('contact.submit') }}" method="POST" class="form contact-form"
-                                    data-aos="fade-up">
+                                <form action="{{ route('career.submit') }}" method="POST" class="mt-0 form contact-form"
+                                    enctype="multipart/form-data" data-aos="fade-up">
                                     @csrf
                                     <div class="field">
                                         <label for="ContactForm-name" class="visually-hidden">
                                             Your Name
                                         </label>
                                         <input id="ContactForm-name" class="text-16" type="text"
-                                            placeholder="Your Name *" name="name" required>
+                                            placeholder="Your Name *" name="name" data-required>
                                     </div>
                                     <div class="field">
                                         <label for="ContactForm-name" class="visually-hidden">
                                             Phone
                                         </label>
                                         <input id="ContactForm-name" class="text-16" type="text"
-                                            placeholder="Your phone *" name="phone" required>
+                                            placeholder="Your phone *" name="phone" data-required>
                                     </div>
                                     <div class="field">
                                         <label for="ContactForm-email" class="visually-hidden">
                                             Email Here
                                         </label>
                                         <input id="ContactForm-email" class="text-16" type="text"
-                                            placeholder="Email Here *" name="email" required>
+                                            placeholder="Email Here *" name="email" data-required>
                                     </div>
                                     <div class="field">
                                         <label for="ContactForm-service" class="visually-hidden">
@@ -144,17 +144,34 @@
                                             Your Comment
                                         </label>
                                         <textarea id="ContactForm-body" class="text-16" rows="4" placeholder="Your cover later *" name="cover_later"
-                                            required></textarea>
+                                            data-required></textarea>
+                                    </div>
+
+                                    <div class="field">
+                                        <b style="color: #fff;">
+                                            Resume
+                                        </b>
+                                        <label for="ContactForm-email" class="visually-hidden">
+                                            Resume
+                                        </label>
+                                        <input id="ContactForm-email" class="text-16" type="file"
+                                            placeholder="Email Here *" name="cv" accept=".pdf, .doc, .docx"
+                                            data-required>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            @if (Session::has('success'))
-                                                <div class="alert alert-success">{{ Session::get('success') }}</div>
+                                            @if ($errors->any())
+                                                <div class="alert alert-danger">
+                                                    <ul class="mb-0">
+                                                        @foreach ($errors->all() as $error)
+                                                            <li>{{ $error }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
                                             @endif
-
-                                            @if (Session::has('error'))
-                                                <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                                            @if (session('success'))
+                                                <div class="alert alert-success">{{ session('success') }}</div>
                                             @endif
 
                                         </div>
