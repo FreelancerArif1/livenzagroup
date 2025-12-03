@@ -37,7 +37,7 @@
                         <div class="col-12 col-lg-6 col-contact-content">
                             <div class="section-headings">
 
-                                <h4 class="heading text-30" data-aos="fade-up">
+                                <h4 class="heading text-20" data-aos="fade-up">
                                     Contact Us
                                 </h4>
                                 <p class="text text-18" data-aos="fade-up">

@@ -15,6 +15,7 @@ use App\Models\Partner;
 use App\Models\Portfolio;
 use App\Models\Sustainability;
 use App\Models\Careerpage;
+use App\Models\JobCircular;
 use Yajra\DataTables\DataTables;
 use App\Models\Blog;
 use App\Models\Project;
@@ -128,6 +129,15 @@ class FrontendController extends Controller
     public function careers()
     {
         $career = Careerpage::where('id', 1)->first();
-        return view('frontend.pages.career', compact('career'));
+        $circulars = JobCircular::where('status', 1)->get();
+        return view('frontend.pages.career', compact('circulars', 'career'));
+    }
+
+    public function careerSingle($slug)
+    {
+        $positions = JobCircular::where('status', 1)->select('id', 'job_slug', 'job_title')->get();
+        $career = Careerpage::where('id', 1)->first();
+        $singlecircular = JobCircular::where('job_slug', $slug)->first();
+        return view('frontend.pages.careerSingle', compact('singlecircular', 'career', 'positions'));
     }
 }

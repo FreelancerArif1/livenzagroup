@@ -19,6 +19,8 @@ use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\SustainabilityController;
 use App\Http\Controllers\Backend\CareerpageController;
+use App\Http\Controllers\Backend\JobAppliedController;
+use App\Http\Controllers\Backend\JobCircularController;
 
 
 Route::get('/store-cache', function () {
@@ -118,6 +120,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/sustainability-list', [SustainabilityController::class, 'list'])->name('admin.sustainability.list');
     Route::resource('careerpage', CareerpageController::class);
     Route::get('/careerpage-list', [CareerpageController::class, 'list'])->name('admin.careerpage.list');
+    Route::resource('careerapply', JobAppliedController::class);
+    Route::get('/careerapply-list', [JobAppliedController::class, 'list'])->name('admin.careerapply.list');
+
+    Route::resource('circular', JobCircularController::class);
+    Route::get('/circular-list', [JobCircularController::class, 'list'])->name('admin.circular.list');
 });
 Route::get('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
@@ -132,3 +139,4 @@ Route::get('/news/{slug}', [FrontendController::class, 'singleNews'])->name('sin
 Route::get('/sustainability', [FrontendController::class, 'sustainability'])->name('sustainability');
 Route::get('/companies', [FrontendController::class, 'companies'])->name('companies');
 Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
+Route::get('/careers/{slug}', [FrontendController::class, 'careerSingle'])->name('career.single');

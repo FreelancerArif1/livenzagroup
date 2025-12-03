@@ -405,18 +405,6 @@
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Parallax Section */
 .video-parallax {
     position: relative;
@@ -454,4 +442,48 @@
     padding: 80px 20px;
     background: #fff;
     color: #222;
+}
+
+.single_circlar {
+    background: #e4ebffa3;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-grid {
+    row-gap: 5px;
+}
+
+.circular_serial {
+    text-align: center;
+    background: #243230;
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 6px;
+    height: 45px;
+    width: 45px;
+}
+
+.job_title {
+    padding: 20px;
+}
+
+.job_deadline ul li {
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.select_option {
+    background-color: #fff;
+    color: currentcolor;
+    width: 100%;
+    padding: 0 15px;
+    min-height: 54px;
+}
+
+.form {
+    gap: 15px;
 }
