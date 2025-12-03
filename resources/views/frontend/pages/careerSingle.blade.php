@@ -19,15 +19,15 @@
         }
 
         /* .button--secondary {
-                                                                                                                        color: #fff;
-                                                                                                                        background-color: rgb(8 68 186);
-                                                                                                                    }
+                                                                                                                            color: #fff;
+                                                                                                                            background-color: rgb(8 68 186);
+                                                                                                                        }
 
-                                                                                                                    .button--secondary .svg-wrapper {
-                                                                                                                        color: #fff;
-                                                                                                                    } */
+                                                                                                                        .button--secondary .svg-wrapper {
+                                                                                                                            color: #fff;
+                                                                                                                        } */
     </style>
-    <main id="sustainability_page">
+    <main id="career_page">
         <div class="page-banner overlay">
             <div class="media media-bg">
                 @if ($career?->banner_video)
