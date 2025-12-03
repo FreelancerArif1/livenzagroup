@@ -12,6 +12,14 @@
             padding: 2px 20px 2px 20px;
             min-height: 35px !important;
             margin-top: 15px;
+            background: none;
+        }
+
+        .button--secondary:focus,
+        .button--secondary:hover {
+            background: none;
+            color: #243230;
+            border: 1px solid #243230;
         }
 
         .button .svg-wrapper {
@@ -20,13 +28,13 @@
         }
 
         /* .button--secondary {
-                                                                color: #fff;
-                                                                background-color: rgb(8 68 186);
-                                                            }
+                                                                                        color: #fff;
+                                                                                        background-color: rgb(8 68 186);
+                                                                                    }
 
-                                                            .button--secondary .svg-wrapper {
-                                                                color: #fff;
-                                                            } */
+                                                                                    .button--secondary .svg-wrapper {
+                                                                                        color: #fff;
+                                                                                    } */
     </style>
     <main id="sustainability_page">
         <div class="page-banner overlay">
