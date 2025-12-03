@@ -33,11 +33,11 @@ class JobAppliedController extends Controller
         $data->orderBy('serial', 'asc');
         return Datatables::of($data)
             ->editColumn('position', function ($row) {
-                $positions = JobCircular::where('id', $row->job_id)->select('id', 'job_slug', 'job_title')->first();
-                if ($positions) {
-                    return $positions->job_tiile;
+                $position = JobCircular::where('id', $row->job_id)->select('id', 'job_slug', 'job_title')->first();
+                if ($position) {
+                    return $position->job_title;
                 } else {
-                    return  null;
+                    return  $row->job_id;
                 }
             })
             ->editColumn('status', function ($row) {
