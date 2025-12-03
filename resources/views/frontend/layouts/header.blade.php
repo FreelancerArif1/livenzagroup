@@ -120,7 +120,8 @@
                                             <a class="menu-link menu-link-main" href="/contact-us">Contact</a>
                                         </li>
                                         <li class="nav-item shop_now_item">
-                                            <a class="menu-link menu-link-main menu-accrodion shop_now" href="/">
+                                            <a href="{{ route('career.single', 'apply-a-position') }}"
+                                                class="menu-link menu-link-main menu-accrodion shop_now" href="/">
                                                 Apply
                                             </a>
                                         </li>
