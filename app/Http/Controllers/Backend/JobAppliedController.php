@@ -37,7 +37,7 @@ class JobAppliedController extends Controller
                 if ($position) {
                     return $position->job_title;
                 } else {
-                    return  $row->job_id;
+                    return  null;
                 }
             })
             ->editColumn('status', function ($row) {
