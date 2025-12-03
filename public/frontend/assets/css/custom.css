@@ -487,3 +487,7 @@
 .form {
     gap: 15px;
 }
+
+ul {
+    padding-left: 15px !important;
+}
