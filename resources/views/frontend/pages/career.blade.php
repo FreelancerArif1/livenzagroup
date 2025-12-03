@@ -9,8 +9,9 @@
 
         .button {
             font-size: 14px;
-            padding: 2px 10px 2px 30px;
-            min-height: 50px !important;
+            padding: 2px 20px 2px 20px;
+            min-height: 35px !important;
+            margin-top: 15px;
         }
 
         .button .svg-wrapper {
@@ -19,13 +20,13 @@
         }
 
         /* .button--secondary {
-                                    color: #fff;
-                                    background-color: rgb(8 68 186);
-                                }
+                                                                color: #fff;
+                                                                background-color: rgb(8 68 186);
+                                                            }
 
-                                .button--secondary .svg-wrapper {
-                                    color: #fff;
-                                } */
+                                                            .button--secondary .svg-wrapper {
+                                                                color: #fff;
+                                                            } */
     </style>
     <main id="sustainability_page">
         <div class="page-banner overlay">
@@ -404,38 +405,20 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3" style="text-align: right;">
                                             <a href="{{ $circular->pdf }}" target="__blank">
                                                 <button type="submit" class="pdf_bnt button button--secondary"
                                                     aria-label="Send Message">
                                                     View Circular
-                                                    <span class="svg-wrapper">
-                                                        <svg class="icon-20" width="20" height="20"
-                                                            viewBox="0 0 20 20" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z"
-                                                                fill="currentColor"></path>
-                                                        </svg>
-                                                    </span>
                                                 </button>
                                             </a>
 
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-2 text-right" style="text-align: right;">
                                             <a href="{{ route('career.single', $circular->job_slug) }}">
                                                 <button type="submit" class="apply_btn button button--secondary"
                                                     aria-label="Send Message">
                                                     Apply
-                                                    <span class="svg-wrapper">
-                                                        <svg class="icon-20" width="20" height="20"
-                                                            viewBox="0 0 20 20" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M13.3365 7.84518L6.16435 15.0173L4.98584 13.8388L12.158 6.66667H5.83652V5H15.0032V14.1667H13.3365V7.84518Z"
-                                                                fill="currentColor"></path>
-                                                        </svg>
-                                                    </span>
                                                 </button>
                                             </a>
                                         </div>
